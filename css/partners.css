@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.partner.text-content h3 {
+  font-family: Raleway;
+  letter-spacing: 3px;
+  font-weight: 400;
+}
+.partner .card-item .img-container {
+  width: 200px;
+  height: 375px;
+}
+.partner .card-item p {
+  margin-top: 10px;
+}
+.partner .cards {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+@media (max-width: 768px) {
+  .partner .card-item .img-container {
+    width: 135px;
+    height: 250px;
+  }
+  .partner .cards {
+    gap: 30px;
+  }
+}
