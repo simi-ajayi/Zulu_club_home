@@ -113,7 +113,6 @@
         style="
           background: url('./images/1.png') no-repeat center;
           background-size: cover;
-          height: 95vh;
         "
       >
         <div class="text-content">
@@ -201,7 +200,7 @@
           >Download APK</a
         >
         <div
-          class=""
+          class="d-flex justify-content-center align-items-center"
           style="
             position: absolute;
             left: 50%;
@@ -210,9 +209,10 @@
           "
         >
           <div
-            class="card p-4 px-5 text-start"
+            class="card p-4 px-5 text-start position-relative"
             style="
-              width: 400px;
+              min-width: 340px;
+              max-width: 400px;
               background-color: #1f0a1d;
               color: white;
               border: 2px solid #dbca90;
@@ -220,10 +220,22 @@
               box-shadow: 0 0 20px #dbca90c1;
             "
           >
-            <form onsubmit="" class="w-100">
-              <h1>Login</h1>
+            <div>
+              <i
+                onclick="closeForm()"
+                class="ri-close-circle-line fs-1 position-absolute"
+                style="
+                  color: #dbca90;
+                  right: 1.2rem;
+                  top: 1rem;
+                  cursor: pointer;
+                "
+              ></i>
+            </div>
+            <form>
+              <h1 class="pt-3">Get Started</h1>
 
-              <label for="telephone" class="w-100 mt-4"><b>Name</b></label>
+              <label for="telephone" class="w-100 mt-3"><b>Name</b></label>
               <input
                 class="w-100 mt-2 px-2 py-3 border-0 rounded"
                 style="outline: none"
@@ -247,13 +259,6 @@
                 class="w-100 mb-2 mt-5 border-0 py-2 fw-bold bg-success text-white rounded"
               >
                 Submit
-              </button>
-              <button
-                type="button"
-                class="w-100 my-2 border-0 py-2 fw-bold fs-6 bg-danger text-white rounded"
-                onclick="closeForm()"
-              >
-                Close
               </button>
             </form>
           </div>
@@ -367,7 +372,9 @@
           <div
             class="main-content pb-3 d-flex flex-wrap justify-content-evenly"
           >
-            <div class="main-cont-L col-12 col-lg-5 order-1 order-lg-0">
+            <div
+              class="main-cont-L col-12 mt-4 mt-lg-0 col-lg-5 order-1 order-lg-0"
+            >
               <!-- <div
               class="main-cont-L col-5 d-grid flex-wrap justify-content-center align-items-center order-2 order-lg-0"
             > -->
@@ -400,7 +407,7 @@
               </div>
             </div>
             <div
-              class="main-cont-R col-12 col-xl-6 pt-0 pt-lg-4 order-0 order-lg-1"
+              class="main-cont-R col-12 col-xl-5 pt-0 pt-lg-4 order-0 order-lg-1"
             >
               <div
                 id="carouselExampleAutoplaying"
@@ -469,7 +476,7 @@
                   <span class="visually-hidden">Next</span>
                 </button>
               </div>
-              <p class="lh-sm mt-3 text-center">
+              <p class="lh-sm mt-3 text-center d-none d-lg-block">
                 Zulu is the only technology solution you will ever need. All the
                 tools that you already use & many more that you never dreamt of.
               </p>
@@ -488,6 +495,10 @@
               </div>
             </div>
           </div>
+          <p class="lh-sm d-block d-lg-none">
+            Zulu is the only technology solution you will ever need. All the
+            tools that you already use & many more that you never dreamt of.
+          </p>
         </div>
       </div>
 
@@ -504,7 +515,7 @@
           Zulu helps you scale with next level solutions
         </h1>
         <div class="main-content pt-3">
-          <div class="new1 d-none d-lg-grid">
+          <div class="new1 d-none d-lg-grid col-9 mx-auto">
             <div class="new-item1">
               <div class="img-container">
                 <img src="./images/img/12.png" alt="Image 4" class="image" />
@@ -741,9 +752,7 @@
           style="border-radius: 20px"
         />
         <div class="text-overlay3">
-          <h1 style="color: #2c1129; font-weight: bolder">
-            JOIN <br />THE <br />CLUB
-          </h1>
+          <h1>JOIN <br />THE <br />CLUB</h1>
         </div>
       </div>
 
@@ -850,15 +859,15 @@
           background-size: cover;
         "
       >
-        <div class="steps-container py-5">
-          <h1 class="pb-5 text-black fs-1 fw-bold text-center">
+        <div class="steps-container py-2 pt-5 py-lg-5">
+          <h1 class="pb-3 pb-lg-5 px-2 text-black fs-1 fw-bold text-center">
             You are 3 steps away from the club, take the 1st one.
           </h1>
           <div
             class="steps d-none px-5 d-md-flex flex-wrap justify-content-around align-items-center h-100"
           >
-            <div class="step col-12 col-md-3">
-              <div class="position-relative" style="height: 420px">
+            <div class="step">
+              <div>
                 <img
                   src="./images/image6-1.webp"
                   alt="Step 1 Image"
@@ -867,13 +876,20 @@
                 <div
                   class="h42 d-flex justify-content-center align-items-center"
                 >
-                  <p style="color: #d30000">Create your <br />Digital Avatar</p>
+                  <p>
+                    Select a website template to customize your brand’s unique
+                    online presence and showcase your style to potential
+                    customers.
+                  </p>
                 </div>
               </div>
-              <p style="color: #d30000">Create your <br />Digital Avatar</p>
+              <p>
+                Step 1: <br />
+                Create your Digital Avatar
+              </p>
             </div>
-            <div class="step col-12 col-md-3">
-              <div class="position-relative" style="height: 420px">
+            <div class="step">
+              <div>
                 <img
                   src="./images/image6-2.webp"
                   alt="Step 2 Image"
@@ -882,13 +898,20 @@
                 <div
                   class="h42 d-flex justify-content-center align-items-center"
                 >
-                  <p style="color: #d30000">Create your <br />Digital Avatar</p>
+                  <p>
+                    Add or create products, banners, videos, blogs, and other
+                    content to create a rich, engaging catalog that attracts and
+                    informs your audience.
+                  </p>
                 </div>
               </div>
-              <p>Build your <br />Catalog Content</p>
+              <p>
+                Step 2: <br />
+                Build your Catalog Content
+              </p>
             </div>
-            <div class="step col-12 col-md-3">
-              <div class="position-relative" style="height: 420px">
+            <div class="step">
+              <div>
                 <img
                   src="./images/ZULU AI ART.png"
                   alt="Step 3 Image"
@@ -897,13 +920,17 @@
                 <div
                   class="h42 d-flex justify-content-center align-items-center"
                 >
-                  <p style="color: #d30000">Create your <br />Digital Avatar</p>
+                  <p>
+                    Select a website template to customize your brand’s unique
+                    online presence and showcase your style to potential
+                    customers.
+                  </p>
                 </div>
               </div>
-              <p>Go Live, <br />Start winning</p>
+              <p>Step 3: <br />Go Live, Start Winning</p>
             </div>
           </div>
-          <div class="steps px-3 d-block d-md-none">
+          <div class="steps px-4 d-block d-md-none">
             <div
               id="carouselExampleAutoplaying"
               class="carousel slide col-12"
@@ -911,8 +938,8 @@
             >
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <div class="step col-12 col-md-3">
-                    <div class="position-relative" style="height: 420px">
+                  <div class="step">
+                    <div>
                       <img
                         src="./images/image6-1.webp"
                         alt="Step 1 Image"
@@ -926,39 +953,18 @@
                         </p>
                       </div>
                     </div>
-                    <p style="color: #d30000">
-                      Create your <br />Digital Avatar
-                    </p>
-                  </div>
-                  <!-- <img src="..." class="d-block w-100" alt="..." /> -->
-                </div>
-                <div class="carousel-item">
-                  <div class="step col-12 col-md-3">
-                    <div class="position-relative" style="height: 420px">
-                      <img
-                        src="./images/image6-1.webp"
-                        alt="Step 1 Image"
-                        style="position: absolute"
-                      />
-                      <div
-                        class="h42 d-flex justify-content-center align-items-center"
-                      >
-                        <p style="color: #d30000">
-                          Create your <br />Digital Avatar
-                        </p>
-                      </div>
-                    </div>
-                    <p style="color: #d30000">
-                      Create your <br />Digital Avatar
+                    <p>
+                      Step 1: <br />
+                      Create your Digital Avatar
                     </p>
                   </div>
                 </div>
                 <div class="carousel-item">
-                  <div class="step col-12 col-md-3">
-                    <div class="position-relative" style="height: 420px">
+                  <div class="step">
+                    <div>
                       <img
-                        src="./images/image6-1.webp"
-                        alt="Step 1 Image"
+                        src="./images/image6-2.webp"
+                        alt="Step 2 Image"
                         style="position: absolute"
                       />
                       <div
@@ -969,9 +975,29 @@
                         </p>
                       </div>
                     </div>
-                    <p style="color: #d30000">
-                      Create your <br />Digital Avatar
+                    <p>
+                      Step 2: <br />
+                      Build your Catalog Content
                     </p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="step">
+                    <div>
+                      <img
+                        src="./images/ZULU AI ART.png"
+                        alt="Step 3 Image"
+                        style="position: absolute"
+                      />
+                      <div
+                        class="h42 d-flex justify-content-center align-items-center"
+                      >
+                        <p style="color: #d30000">
+                          Create your <br />Digital Avatar
+                        </p>
+                      </div>
+                    </div>
+                    <p>Step 3: <br />Go Live, Start Winning</p>
                   </div>
                 </div>
               </div>
@@ -1454,7 +1480,7 @@
           style="border-radius: 20px"
         />
         <div class="text-content10">
-          <h1 style="font-weight: bolder">
+          <h1>
             <span>WHY</span><br />
             <span>CHOOSE</span><br />
             <span class="highlight">ZULU</span>

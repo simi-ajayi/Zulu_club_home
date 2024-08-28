@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@100;300;400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-:root{
+:root {
   /* --text-size: 2rem; */
   --text-second-color: #c9c3c9;
   --text-first-color: #1f0a1d;
@@ -22,7 +22,9 @@ body {
   color: white;
   background-color: #1f0a1d;
 }
-
+.cont1 {
+  height: 85vh;
+}
 /* For background image and color */
 .bg-image {
   border-radius: 20px !important;
@@ -148,9 +150,9 @@ body {
   box-sizing: border-box;
 }
 .card-item .img-container {
-  aspect-ratio: 1/2;
-  width: 250px;
-  height: 440px;
+  aspect-ratio: 1/1.8;
+  width: 200px;
+  /* height: 440px; */
 }
 
 .card-item p {
@@ -159,13 +161,12 @@ body {
 }
 
 .card-item2 {
-  text-align: center;
-  box-sizing: border-box;
+  transition: all 1s;
 }
 .card-item2 .img-container {
-  aspect-ratio: 1/2;
-  width: 265px;
-  height: 420px;
+  aspect-ratio: 1/1.8;
+  width: 200px;
+  /* height: 420px; */
 }
 .card-item2 p {
   margin-top: 35px;
@@ -177,13 +178,8 @@ body {
   margin-top: 40px;
 }
 .card-item2 .btn button {
-  background-color: #ffde59;
-  outline: none;
-  border: none;
-  border-radius: 10px;
-  transition: all 5s;
   padding: 10px;
-  width: 100px;
+  width: 78px;
 }
 .card-item2 .btn button:nth-child(2) {
   margin-left: 10px;
@@ -194,40 +190,6 @@ body {
 }
 .card-item2:hover p {
   display: none;
-}
-
-/* Responsive adjustments for card layout */
-
-/* @media (max-width: 768px) {
-  .card-item {
-    width: calc(90% - 10px); 
-    Two cards per row with smaller gaps
-  }
-}
-
-@media (max-width: 480px) {
-  .card-item {
-    width: 100%; 
-    Full-width cards on mobile screens
-  }
-} */
-
-.wrapper {
-  width: 100%;
-  height: 700px; /* Adjust as needed to fit your design */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative; /* Ensure it stacks correctly */
-  z-index: 1; /* Ensure it is above other elements */
-}
-
-.container1 {
-  height: 60%;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content: start;
-  position: relative; /* Ensure it is positioned correctly within wrapper */
 }
 
 .description p {
@@ -272,6 +234,8 @@ input:checked + label .description5 {
   bottom: 14%;
   left: 16%;
   font-size: 4.5rem;
+  color: #2c1129;
+  font-weight: 800;
 }
 
 .steps-container {
@@ -286,19 +250,32 @@ input:checked + label .description5 {
 }
 
 .step {
-  /* width: 25%; */
   overflow: hidden;
   border-radius: 10px;
 }
+.step > div {
+  position: relative;
+  width: 230px;
+  height: 360px;
+}
 .h42 {
-  height: 100%;
+  /* height: 100%; */
   width: 100%;
+  aspect-ratio: 1/1.6;
   position: absolute;
   left: 0;
   background: #1f0a1dc1;
-  transform: translateX(-101%);
+  transform: translateX(-100%);
   transition: all 0.5s ease;
   border-radius: 10px;
+}
+.h42 p {
+  color: #dbaf75;
+  text-align: justify;
+  font-size: 1rem;
+  padding: 10px 15px;
+  line-height: 30px;
+  font-weight: 600;
 }
 .step:hover .h42 {
   transform: translateX(0%);
@@ -307,21 +284,16 @@ input:checked + label .description5 {
 .step img {
   left: 0;
   width: 100%;
-  /* height: 100%; */
-  height: 420px;
+  aspect-ratio: 1/1.6;
   border-radius: 10px;
 }
 
-.step p {
-  text-align: center;
+.step > p {
   margin-top: 1rem;
   font-size: 1.2em;
-  color: #333;
   font-weight: 900;
+  color: #1f0a1d;
   transition: all 0.5s ease;
-}
-.step:hover p {
-  color: #d30000;
 }
 
 /* @media (max-width: 768px) {
@@ -431,6 +403,7 @@ input:checked + label .description5 {
   bottom: 14%;
   left: 16%;
   font-size: 4.5rem;
+  font-weight: 800;
 }
 .a1card {
   border-radius: 10px;
@@ -860,7 +833,7 @@ input:checked + label .description5 {
 .new-item {
   margin: 0 auto;
   aspect-ratio: 1/1;
-  width: 150px;
+  width: 135px;
   cursor: pointer;
 }
 .new-item img {
@@ -894,11 +867,12 @@ input:checked + label .description5 {
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  position: relative;
+  /* position: relative; */
 }
 .new-item1 .img-container {
-  width: 550px;
-  height: 325px;
+  aspect-ratio: 2/1;
+  width: 450px;
+  /* height: 325px; */
 }
 .img-container {
   position: relative;
@@ -944,12 +918,9 @@ input:checked + label .description5 {
 }
 
 @media (max-width: 768px) {
-  /* .text-overlay3 h1 {
-    font-size: 1.25rem;
-  } */
-  /* .text-content10 h1 {
-    font-size: 1.25rem;
-  } */
+  .cont1 {
+    height: 95vh;
+  }
   .new-item1 .img-container {
     width: 315px;
     height: 195px;
@@ -979,7 +950,7 @@ input:checked + label .description5 {
   .a1card p {
     color: white;
     line-height: 40px;
-    min-height: 220px;
+    min-height: 170px;
     font-size: 18px;
   }
   .card-item2:hover .btn {
@@ -988,12 +959,23 @@ input:checked + label .description5 {
   .card-item2:hover p {
     display: block;
   }
-  .step img {
-    left: 5%;
-    width: 90%;
-    height: 370px;
+  .step {
   }
-  .h42{
+  .step > div {
+    margin: 0 10%;
+    /* width: 350px; */
+    width: 80%;
+    height: 375px;
+  }
+  .step img {
+    left: 0;
+    width: 100%;
+    /* aspect-ratio: 1/1.; */
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  .h42 {
     visibility: hidden;
   }
   .about-text p {
@@ -1001,22 +983,23 @@ input:checked + label .description5 {
     line-height: 20px;
   }
   .text-overlay3 h1 {
-    position: absolute;
     bottom: 10%;
     left: 10%;
-    font-size: 4rem;
+    font-size: 2.5rem;
+    color: white;
   }
   .cont5 img {
-    height: 90vh;
+    aspect-ratio: 1/1;
+    height: 40vh;
   }
   .cont9 img {
-    height: 90vh;
+    aspect-ratio: 1/1;
+    height: 40vh;
   }
   .text-content10 h1 {
-    position: absolute;
     bottom: 10%;
     left: 10%;
-    font-size: 4rem;
+    font-size: 2.5rem;
   }
   .brand-subtext {
     font-size: 10;
