@@ -18,9 +18,7 @@ const faqs = {
 };
 
 const handleClick = (activeKey) => {
-  console.log(activeKey);
   Object.keys(elements).forEach((key) => {
-    console.log("5656",key)
     elements[key].classList.toggle("active", key === activeKey);
     faqs[key].classList.toggle("d-none", key !== activeKey);
   });

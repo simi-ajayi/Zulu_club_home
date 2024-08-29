@@ -4,49 +4,332 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Explore</title>
-    <link rel="stylesheet" href="../css/header.css" />
-    <link rel="stylesheet" href="../css/styles.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
+    <link rel="stylesheet" href="../css/header.css" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <link rel="stylesheet" href="../css/explore.css" />
   </head>
   <body>
-    <header
-      id="header"
-      class="fixed-top d-flex align-items-center header-transparent"
-    >
-      <div
-        class="container h-100 d-flex justify-content-between align-items-center"
+    <div class="container text-center">
+      <header
+        id="header"
+        class="fixed-top d-flex align-items-center header-transparent"
+        style="z-index: 1"
       >
-        <div class="logo" style="width: 70px">
-          <!-- <h1 class="text-light">
-          <a href="/" class="text-decoration-none text-white"
-            ><span style="font-family: Poppins; font-size: 30px"
-              >ZULU</span
-            ></a
-          >
-        </h1> -->
-          <img src="../images/zulu-logo-3.png" class="w-100 h-100" alt="" />
+        <div
+          class="container h-100 d-flex justify-content-between align-items-center"
+        >
+          <div class="logo" style="width: 70px">
+            <!-- <h1 class="text-light">
+            <a href="/" class="text-decoration-none text-white"
+              ><span style="font-family: Poppins; font-size: 30px"
+                >ZULU</span
+              ></a
+            >
+          </h1> -->
+            <img src="../images/zulu-logo-3.png" class="w-100 h-100" alt="" />
+          </div>
+          <nav id="navbar" class="navbar align-items-center mb-0">
+            <ul class="d-none d-lg-flex">
+              <li><a href="/">Business</a></li>
+              <li><a href="./brands.html">Brands</a></li>
+              <li><a href="./partners.html">Partners</a></li>
+              <li><a href="./aboutus.html">About Us</a></li>
+              <!-- <li><a href="#">Consumers</a></li> -->
+              <li>
+                <a href="#">
+                  <button class="btn1">Get Started</button>
+                </a>
+              </li>
+            </ul>
+            <div class="togglebtn">
+              <i class="tbtn1 ri-menu-line me-3 d-block d-lg-none"></i>
+              <i class="tbtn2 ri-close-large-fill me-3 d-none"></i>
+            </div>
+          </nav>
+          <!-- .navbar -->
         </div>
-        <nav id="navbar" class="navbar align-items-center mb-0">
-          <ul>
-            <li><a href="/">Business</a></li>
-            <li><a href="./brands.html">Brands</a></li>
-            <li><a href="./partners.html">Partners</a></li>
-            <!-- <li><a href="#">Consumers</a></li> -->
-            <li>
-              <a href="#">
-                <div class="btn1">Get Started</div>
-              </a>
-            </li>
-          </ul>
-          <i class="bi bi-list mobile-nav-toggle d-none"></i>
-        </nav>
-        <!-- .navbar -->
+      </header>
+
+      <!-- Mobile Menu -->
+      <div
+        class="d-none hamburger navbar justify-content-star align-items-start"
+        style="
+          height: 100vh;
+          position: fixed;
+          background-color: #1f0a1d;
+          z-index: 999;
+          width: 50%;
+          padding-top: 10px;
+          transform: translateX(-100%);
+          transition: all 0.3s ease-in-out;
+        "
+      >
+        <ul
+          class="flex-column text-start align-items-start"
+          style="list-style: none; transition: all 0.3s; line-height: 20px"
+        >
+          <li>
+            <a
+              href="/"
+              style="
+                font-family: Poppins;
+                font-weight: 600;
+                font-size: 30px;
+                line-height: 70px;
+              "
+              >ZULU</a
+            >
+          </li>
+          <li class="mt-2"><a href="/">Home</a></li>
+          <li><a href="/">Business</a></li>
+          <li><a href="./brands.html">Brands</a></li>
+          <li><a href="./partners.html">Partners</a></li>
+          <li><a href="./aboutus.html">About Us</a></li>
+          <!-- <li><a href="#">Consumers</a></li> -->
+          <li class="mt-4">
+            <a href="#">
+              <div class="btn1">Get Started</div>
+            </a>
+          </li>
+        </ul>
       </div>
-    </header>
+      <!--END Mobile Menu -->
+
+      <div
+        class="cont1 container mb-5 bg-image"
+        style="
+          background: url('../images/img/h26.webp') no-repeat center;
+          background-size: cover;
+          margin-top: 0;
+        "
+      >
+        <div class="bg-color pb-5">
+          <h1 class="fs-1 fw-bold" style="padding-top: 110px">
+            Explore Zulu
+            <!-- Zulu is an <span class="highlight">exciting</span> tech platform. -->
+          </h1>
+
+          <img
+            onclick="scaleDiv(this)"
+            class="my-5"
+            src="../images/zulu-logo-2.png"
+            alt=""
+            style="width: 220px; aspect-ratio: 1/1; cursor: pointer"
+          />
+          <p
+            class="fs-4 fw-light px-2"
+            style="line-height: 50px; color: var(--text-second-color)"
+          >
+            Design your outlet or explore our B2B market
+            <br />
+            Feel free to Download our app to join the club.
+
+            <!-- Fashion is all about excitement.
+            <br />
+            Excitement comes from something new and better.<br />
+            A lot of exciting things are happening online, a lot more can happen
+            offline. <br />Zulu helps you deliver that excitement - online,
+            offline & OMNI. -->
+          </p>
+        </div>
+      </div>
+
+      <div
+        class="cont2 py-5 mt-5 container text-center"
+        style="font-family: 'Raleway'; font-weight: 600; font-size: 50px"
+      >
+        <h1 class="pb-5 fs-1 fw-bold">Design your outlet section</h1>
+        <div class="main-content pt-3">
+          <div class="new1 d-none d-lg-grid col-9 mx-auto">
+            <div class="new-item1">
+              <div class="img-container">
+                <img src="../images/img/12.png" alt="Image 4" class="image" />
+                <img
+                  src="../images/img/13.png"
+                  alt="Image 4"
+                  class="image hover-image"
+                />
+              </div>
+              <h2>Website &amp; Mobile App</h2>
+            </div>
+            <div class="new-item1">
+              <div class="img-container">
+                <img src="../images/img/14.png" alt="Image 4" class="image" />
+                <img
+                  src="../images/img/15.png"
+                  alt="Image 4"
+                  class="image hover-image"
+                />
+              </div>
+              <h2>B2B Market</h2>
+            </div>
+            <div class="new-item1">
+              <div class="img-container">
+                <img src="../images/img/16.png" alt="Image 4" class="image" />
+                <img
+                  src="../images/img/17.png"
+                  alt="Image 4"
+                  class="image hover-image"
+                />
+              </div>
+              <h2>Marketing &amp; loyalty</h2>
+            </div>
+            <div class="new-item1">
+              <div class="img-container">
+                <img src="../images/img/18.png" alt="Image 4" class="image" />
+                <img
+                  src="../images/img/19.png"
+                  alt="Image 4"
+                  class="image hover-image"
+                />
+              </div>
+              <h2>New Experiences</h2>
+            </div>
+          </div>
+
+          <!-- FOR MOBILE VIEW  -->
+          <div class="new1 d-block d-lg-none">
+            <div
+              id="carouselExampleAutoplaying"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item">
+                  <div class="new-item1">
+                    <div class="img-container">
+                      <img
+                        src="../images/img/12.png"
+                        alt="Image 4"
+                        class="image"
+                      />
+                      <img
+                        src="../images/img/13.png"
+                        alt="Image 4"
+                        class="image hover-image"
+                      />
+                    </div>
+                    <h2>Website &amp; Mobile App</h2>
+                  </div>
+                </div>
+                <div class="carousel-item active">
+                  <div class="new-item1">
+                    <div class="img-container">
+                      <img
+                        src="../images/img/14.png"
+                        alt="Image 4"
+                        class="image"
+                      />
+                      <img
+                        src="../images/img/15.png"
+                        alt="Image 4"
+                        class="image hover-image"
+                      />
+                    </div>
+                    <h2>B2B Market</h2>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="new-item1">
+                    <div class="img-container">
+                      <img
+                        src="../images/img/16.png"
+                        alt="Image 4"
+                        class="image"
+                      />
+                      <img
+                        src="../images/img/17.png"
+                        alt="Image 4"
+                        class="image hover-image"
+                      />
+                    </div>
+                    <h2>Marketing &amp; loyalty</h2>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div class="new-item1">
+                    <div class="img-container">
+                      <img
+                        src="../images/img/18.png"
+                        alt="Image 4"
+                        class="image"
+                      />
+                      <img
+                        src="../images/img/19.png"
+                        alt="Image 4"
+                        class="image hover-image"
+                      />
+                    </div>
+                    <h2>New Experiences</h2>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="cont2 container text-center mt-5">
+        <h1 class="pb-5 fs-1 fw-bold">Zulu B2B section</h1>
+        <div
+          id="content2"
+          class="row row-cols-3 text-start justify-content-between"
+        ></div>
+      </div>
+
+      <!-- 85  100 150 151 -->
+
+      <div class="cont3 container text-center" style="padding-top: 350px">
+        <h1 class="pb-5 fs-1 fw-bold">Zulu B2B section</h1>
+        <div
+          id="content1"
+          class="row row-cols-3 text-start justify-content-between"
+        >
+          <!-- <div class="col col-md-4 card">
+              <h1>Discover</h1>
+              <p></p>
+              <img src=${} alt="" style="width: 150px;aspect-ratio: 1/1;object-fit: cover;">
+            </div> -->
+        </div>
+      </div>
+
+
+      <div id="content4"></div>
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/api.js"></script>
   </body>
 </html>

@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  color: black;
+}
+.new-item1 h2 {
+    color: black;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
