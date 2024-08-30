@@ -103,7 +103,7 @@ const url4 = "https://localhost/Zulu-Backend/app/v1/api/get_brands_data"; //❌
 const url5 =
   "https://localhost/Zulu-Backend/app/v1/api/get_seller_features_sections"; //❌
 const url6 = "https://zulushop.in/app/v1/api/get_categories"; //✅
-const url7 = "https://localhost/Zulu-Backend/seller/app/v1/api/get_products"; //❌
+const url7 = "https://zulushop.in/app/v1/api/get_products"; //✅
 
 const url8 = "https://zulushop.in/app/v1/api/seller_list"; //✅
 
