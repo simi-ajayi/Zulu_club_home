@@ -1,12 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Layout from "./Layout";
 import SellerHome from "./pages/seller/SellerHome";
-import Product from "./pages/seller/Product";
+import Test from "./pages/new/Test";
+import Test2 from "./pages/new/Test2";
+import ShopNowPage from "./pages/shop_now/ShopNowPage";
+import SellerDetails from "./pages/seller/SellerDetails";
+import ProductPage from "./pages/product_page/ProductPage ";
 
 const router = createBrowserRouter([
   {
@@ -14,12 +17,29 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "/",
+        path: "",
         element: <SellerHome />,
       },
       {
-        path: ":id",
-        element: <Product/>,
+        path: "/:id",
+        element: <SellerDetails />,
+        children: [],
+      },
+      {
+        path: "/shopnowpage",
+        element: <ShopNowPage />,
+      },
+      {
+        path: "/ProductPage ",
+        element: <ProductPage />,
+      },
+      {
+        path: "/test",
+        element: <Test />,
+      },
+      {
+        path: "/test2",
+        element: <Test2 />,
       },
     ],
   },

@@ -11,8 +11,8 @@ import "./styles.css";
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
-const Banner1 = ({ sliderImages }) => {
-  console.log(sliderImages);
+const Banner1 = ({ images }) => {
+  // console.log(sliderImages);
   return (
     <div className="mt-10">
       <Swiper
@@ -32,29 +32,14 @@ const Banner1 = ({ sliderImages }) => {
         }}
         className="mySwiper"
       >
-        {/* {sliderImages.map((item,index) => (
+        {images.map((item, index) => (
           <SwiperSlide key={index}>
-            <img src={`https://zulushop.in/uploads/seller/${item.file_name}`} alt="" />
+            <img
+              src={`https://zulushop.in/uploads/seller/${item.file_name}`}
+              alt=""
+            />
           </SwiperSlide>
-        ))} */}
-        <SwiperSlide>
-          <img
-            src="https://zulushop.in/uploads/seller/Frame_1300931.png"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://zulushop.in/uploads/seller/Frame_1300931.png"
-            alt=""
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://zulushop.in/uploads/seller/Frame_1300931.png"
-            alt=""
-          />
-        </SwiperSlide>
+        ))}
       </Swiper>
     </div>
   );

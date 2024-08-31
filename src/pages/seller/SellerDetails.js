@@ -11,64 +11,52 @@ import Features from "../../components/features/Features";
 import ProductGalleries from "../../components/product_galleries/ProductGalleries";
 import Blogs from "../../components/blogs/Blogs";
 import Testimonials from "../../components/testimonials/Testimonials";
+import VideoSlider from "../../components/video_slider/VideoSlider";
+import OutletBanner from "../../components/outlet_banner/OutletBanner";
+import AboutUs from "../../components/about_us/AboutUs";
 
-const Product = () => {
-  const [data, setData] = useState([]);
+const SellerDetails = () => {
   const [data2, setData2] = useState([]);
   const [loader, setLoader] = useState(true);
-
-  const [sliderImage, setSliderImage] = useState([]);
-
+  const [error, setError] = useState(false);
   const { id } = useParams();
 
-  const url = "https://zulushop.in/app/v1/api/get_sellers";
-  const url8 = "https://zulushop.in/app/v1/api/seller_list";
-
-  async function fetchData() {
-    let response = await axios.post(url);
-    let res = await response.data.data;
-    let filteredProducts = res.filter((product) => product.slug === id);
-    setData(filteredProducts[0]);
-    // console.log(data);
-  }
+  const url = "https://zulushop.in/app/v1/api/seller_list?id=85";
 
   async function sellerList() {
-    let response = await axios.post(
-      "https://zulushop.in/app/v1/api/seller_list?id=85"
-    );
-    let res = await response.data;
-    // console.log(res);
-    // let filteredProducts = res.filter((product) => product.slug === id);
-    // console.log("data is here", filteredProducts);
-    // setData2(filteredProducts[0]);
-    // setData2(filteredProducts);
-    // console.log(filteredProducts.sliderImages);
+    try {
+      let response = await axios.post(url);
+      let res = await response.data;
+      // console.log(res);
+      // let filteredProducts = res.filter((product) => product.slug === id);
+      // console.log("data is here", filteredProducts);
+      // setData2(filteredProducts[0]);
+      // setData2(filteredProducts);
 
-    setData2(res);
-    console.log(res)
-    setLoader(false);
-
-    console.log(res[0].slider_images);
-    setSliderImage(res[0].slider_images);
-    // setSliderImage(data2.sliderImages);
+      setData2(res[0]);
+      setLoader(false);
+      setError(false);
+    } catch (error) {
+      setError(true);
+      console.log("ERROR MESSAGE :: ", error.message);
+    }
   }
-  
-  console.log();
+
+
 
   useEffect(() => {
-    fetchData();
     sellerList();
   }, []);
 
-  // console.log(data2.slider_images);
-
-  let sliderImages = data2[0]?.slider_images;
+  let sliderImages = data2?.slider_images;
 
   try {
     sliderImages = JSON.parse(sliderImages);
   } catch (error) {
-    console.error("Error parsing JSON:", error);
+    // console.error("Error parsing JSON:", error);
   }
+
+  // console.log(sliderImages)
 
   if (loader) {
     return (
@@ -77,27 +65,30 @@ const Product = () => {
       </h1>
     );
   }
+  if (error) {
+    return (
+      <h1 className="flex justify-center items-center h-screen text-3xl font-bold">
+        Something went wrong... {error.message}
+      </h1>
+    );
+  }
+
+  // console.log("data2 is here", data2.json_component);
 
   return (
     <>
       <Header data2={data2} />
-      <div className="mt-20">
-        <h1>neejjdklsjaklfj</h1>
-        {sliderImages.map((item) => (
-          <img src={`https://zulushop.in/uploads/seller/${item.file_name}`} />
-        ))}
-      </div>
-
-      <div className="mt-24">
-        <CategoriesMenu />
-        <Banner1 images={sliderImages} />
-        <BrandsSection />
-        <Categories />
-        <Features />
-        <ProductGalleries />
-        <Blogs />
-        <Testimonials />
-      </div>
+      <CategoriesMenu />
+      <Banner1 images={sliderImages} />
+      <BrandsSection />
+      <Categories />
+      <Features />
+      <ProductGalleries />
+      <Blogs />
+      <Testimonials />
+      <VideoSlider />
+      <OutletBanner />
+      <AboutUs />
 
       {/* second api */}
 
@@ -143,4 +134,4 @@ const Product = () => {
   );
 };
 
-export default Product;
+export default SellerDetails;

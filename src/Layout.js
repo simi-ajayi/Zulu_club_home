@@ -2,15 +2,18 @@ import React from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./components/header/Header";
 import Footer from "./components/footer/Footer";
+import UserContextProvider from "./context/UserContextProvider";
 
 function Layout() {
   return (
     <>
-      {/* <Header /> */}
-      <div className="container px-[7.5%] w-full text-center">
-        <Outlet />
-      <Footer />
-      </div>
+      <UserContextProvider>
+        {/* <Header /> */}
+        <div className="container mx-auto w-4/5 text-center mt-20">
+          <Outlet />
+          <Footer />
+        </div>
+      </UserContextProvider>
     </>
   );
 }
