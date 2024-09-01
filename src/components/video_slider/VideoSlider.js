@@ -1,5 +1,5 @@
 import React from "react";
-import { Card4 } from "../cards/Card4";
+import { Card4 } from "../cards/Blogcard";
 import { Link } from "react-router-dom";
 
 const VideoSlider = () => {
@@ -13,9 +13,9 @@ const VideoSlider = () => {
           </Link>
         </div>
         <div className="flex justify-between gap-8 mt-5 overflow-hidden">
+       {/*    <Card4 name={"video"} width={"31%"} />
           <Card4 name={"video"} width={"31%"} />
-          <Card4 name={"video"} width={"31%"} />
-          <Card4 name={"video"} width={"31%"} />
+          <Card4 name={"video"} width={"31%"} /> */}
         </div>
       </div>
     </div>
