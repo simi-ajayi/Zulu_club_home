@@ -1,8 +1,28 @@
-import React from "react";
-import Card5 from "../cards/Card5";
+import React, { useEffect, useState } from "react";
+import { Blogcard } from "../cards/Blogcard";
 import { Link } from "react-router-dom";
-
+import { url } from "../api/Url";
+import axios from "axios";
+import Testimonialcard from "../cards/Testimonialcard";
 const Testimonials = () => {
+  const [test, setTest] = useState([]);
+
+  const getTest = async () => {
+    const json = JSON.stringify({ seller_id: "85" });
+    axios.post(url + '/app/v1/api/listoftestimonal', json)
+      .then((res) => {
+        console.log('data test' + JSON.stringify(res.data));
+          setTest(res.data)
+        // setBranddata([])
+      })
+      .catch(() => {
+        setTest([])
+      });
+  }
+  useEffect(() => {
+    getTest();
+  }, [])
+
   return (
     <div className="mt-10">
       <div className="flex justify-between items-center">
@@ -12,9 +32,14 @@ const Testimonials = () => {
         </Link>
       </div>
       <div className="flex justify-between gap-8 mt-5 overflow-hidden">
-        <Card5 name={Testimonials} />
-        <Card5 name={Testimonials} />
-        <Card5 name={Testimonials} />
+
+        {test && test.map(user => (
+
+          <Testimonialcard key={user.id} id={user.id}
+            comments={user.comments}
+            username={user.username}
+          />
+        ))}
       </div>
     </div>
   );

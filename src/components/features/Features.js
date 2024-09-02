@@ -37,7 +37,7 @@ const Features = () => {
   return (
     <div className="mt-10">
       <div className="mt-5">
-        {featureData.map((item) => {
+        {featureData.map((item, index) => {
           return (
             <div key={item.id}>
               <div className="flex justify-between mt-10 mb-5 items-center">

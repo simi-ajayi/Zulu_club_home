@@ -80,7 +80,7 @@ const SellerDetails = () => {
       <Header data2={data2} />
       <CategoriesMenu />
       <Banner1 images={sliderImages} />
-      <BrandsSection />
+       <BrandsSection /> 
       <Categories />
       <Features />
       <ProductGalleries />
