@@ -13,7 +13,6 @@ const Header = () => {
   const [color2, setColor2] = useState(sellerListdata.color_2);
   return (
     <header
-      id="header"
       className={`fixed top-0 w-4/5 mx-[10%] mt-[40px] flex items-center bg-transparent z-10 bg-gradient-to-r from-[${color}] to-[#ad0b97] font-[${color2}] text-[${sellerListdata.text_color_1}]`}
     >
       <div className="container mx-auto h-full flex justify-between items-center">
@@ -27,7 +26,7 @@ const Header = () => {
         <nav id="navbar" className="flex items-center">
           <ul className="hidden lg:flex space-x-6 items-center">
             <li>
-              <Link to="/">Home</Link>
+              <Link to="/Home">Home</Link>
             </li>
             <li>
               <Link to="">Shop now</Link>

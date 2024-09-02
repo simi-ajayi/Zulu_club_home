@@ -1,17 +1,9 @@
 import React from "react";
-import bg from "../../../assets/images/1.png";
-
+import "../../../pages/zulu_club/Home.css";
 const Cont1 = () => {
-  var sectionStyle = {
-    backgroundImage: "url(" + { bg } + ")",
-  };
   return (
-    <div>
-      <div
-        className="cont1 container mt-0 bg-cover bg-center"
-        style={sectionStyle}
-      >
-        <div className="text-content">
+      <div className="cont1 container mx-auto mt-0 bg-cover bg-center rounded-[20px]">
+        <div className="text-content text-white">
           <h1 className="text-4xl font-bold">
             The premium <br />
             fashion Club.
@@ -22,7 +14,6 @@ const Cont1 = () => {
           <h3 className="text-2xl font-medium">Manufacturers</h3>
         </div>
       </div>
-    </div>
   );
 };
 

@@ -6,7 +6,7 @@ const HeaderMain = () => {
     <div>
       <header
         id="header"
-        class="fixed top-0 left-0 px-[7.5%] w-full z-10 flex items-center justify-between bg-transparent"
+        class="fixed top-0 left-0 right-0 px-[7.5%] w-full z-10 flex items-center justify-between bg-transparent"
       >
         <div class="container flex items-center justify-between h-full">
           <div class="logo w-16">
