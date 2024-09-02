@@ -24,6 +24,7 @@ const Blogs = () => {
     getBrd();
   }, [])
 
+  console.log("Blogs", branddata);
 
   return (
     <div className="mt-10">
@@ -40,7 +41,7 @@ const Blogs = () => {
 
           <Blogcard key={user.id} className="p-4" id={user.id}
             title={user.Title}
-            Blogimage={user.Blogimage}
+            Blogimage={`uploads/seller/${user.Blogimage}`}
             name={"blog"} width={"31%"}
           />
         ))}

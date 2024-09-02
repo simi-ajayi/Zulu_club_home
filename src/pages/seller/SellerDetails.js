@@ -14,6 +14,8 @@ import Testimonials from "../../components/testimonials/Testimonials";
 import VideoSlider from "../../components/video_slider/VideoSlider";
 import OutletBanner from "../../components/outlet_banner/OutletBanner";
 import AboutUs from "../../components/about_us/AboutUs";
+import Highlights from "../../components/highlights/Highlights";
+import Model3D from "../../components/model3D/Model3D";
 
 const SellerDetails = () => {
   const [data2, setData2] = useState([]);
@@ -41,8 +43,6 @@ const SellerDetails = () => {
       console.log("ERROR MESSAGE :: ", error.message);
     }
   }
-
-
 
   useEffect(() => {
     sellerList();
@@ -80,13 +80,15 @@ const SellerDetails = () => {
       <Header data2={data2} />
       <CategoriesMenu />
       <Banner1 images={sliderImages} />
-       <BrandsSection /> 
+      <BrandsSection />
       <Categories />
+      <Highlights />
       <Features />
-      <ProductGalleries />
+      {/* <ProductGalleries /> */}
       <Blogs />
       <Testimonials />
       <VideoSlider />
+      <Model3D />
       <OutletBanner />
       <AboutUs />
 

@@ -3,7 +3,7 @@ import Card3 from "../cards/Card3";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Features = () => {
+const Highlights = () => {
   const [featureData, setFeatureData] = useState([]);
   // const [product, setProduct] = useState([]);
 
@@ -37,37 +37,30 @@ const Features = () => {
   return (
     <div className="mt-10">
       <div className="mt-5">
-        {featureData.map((item) => {
-          return (
-            <div key={item.id}>
-              <div className="flex justify-between mt-10 mb-5 items-center">
-                <div className="">
-                  <h1 className="text-left font-bold text-2xl">{item.title}</h1>
-                  <p>{item.short_description}</p>
-
-                  {/* <p>{item.variants.price}</p> */}
-                </div>
-                <Link to="" className="text-blue-700">
-                  view all
-                </Link>
+        <div className="flex justify-between">
+          <div>
+            <h1 className="text-left font-bold text-2xl">Highlights</h1>
+            {/* <p>{item.short_description}</p> */}
+          </div>
+          <Link to="" className="text-blue-700">
+            view all
+          </Link>
+        </div>
+        <div className="flex justify-between mt-10 mb-5 items-center">
+          {featureData.map((item) => {
+            return (
+              <div key={item.id} className="banner">
+                <Card3
+                  title={item.title}
+                  image={`/uploads/seller/${item.banner}`}
+                />
               </div>
-              <div className="flex justify-between">
-                {productDetails.map((product) => (
-                // {item.product_details.productinfo.map((product) => (
-                  <Card3
-                    image={product.image}
-                    title={product.name}
-                    price={product.variants[0].price}
-                    discount={product.variants[0].special_price}
-                  />
-                ))}
-              </div>
-            </div>
-          );
-        })}
+            );
+          })}
+        </div>
       </div>
     </div>
   );
 };
 
-export default Features;
+export default Highlights;
