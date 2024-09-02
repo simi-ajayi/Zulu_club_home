@@ -24,6 +24,7 @@ const Features = () => {
   // console.log(featureData);
 
   let productDetails = featureData[0]?.product_details.productinfo;
+  let productDetails2 = featureData[0]?.product_details.productinfo;
 
   console.log(productDetails);
 
@@ -51,7 +52,8 @@ const Features = () => {
                 </Link>
               </div>
               <div className="flex justify-between">
-                {productDetails.map((product) => (
+                {item.product_details.productinfo.map((product) => (
+                // {productDetails.map((product) => (
                   <Card3
                     image={product.image}
                     name={product.name}
