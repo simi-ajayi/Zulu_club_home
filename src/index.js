@@ -10,6 +10,7 @@ import Test2 from "./pages/new/Test2";
 import ShopNowPage from "./pages/shop_now/ShopNowPage";
 import SellerDetails from "./pages/seller/SellerDetails";
 import ProductPage from "./pages/product_page/ProductPage ";
+import Home from "./pages/zulu_club/Home";
 
 const router = createBrowserRouter([
   {
@@ -42,6 +43,10 @@ const router = createBrowserRouter([
         element: <Test2 />,
       },
     ],
+  },
+  {
+    path: "/Home",
+    element: <Home />,
   },
 ]);
 

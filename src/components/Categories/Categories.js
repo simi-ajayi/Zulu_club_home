@@ -16,7 +16,7 @@ const Categories = () => {
       );
       let data = await response.data.message;
       let setPrimaryCategory = data.filter((item) => item.is_primary === "yes");
-      console.log(setPrimaryCategory);
+      // console.log(setPrimaryCategory);
       setCategoriesdata(setPrimaryCategory);
     } catch (error) {
       setCategoriesdata([]);
@@ -34,8 +34,8 @@ const Categories = () => {
         </Link>
       </div>
       <div className="flex justify-between gap-8 mt-5 flex-wrap">
-        {categoriesdata.map((item) => (
-          <Link to="/" key={item.category_id}>
+        {categoriesdata.map((item,index) => (
+          <Link to="/" key={index}>
             {/* <Link to={`/categories/${item.category_id}`} key={item.category_id}> */}
             <Card3 image={item.zulu_category_image} title={item.zulu_category_name} />
           </Link>

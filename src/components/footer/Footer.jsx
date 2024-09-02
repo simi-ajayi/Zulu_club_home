@@ -5,7 +5,7 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 const Footer = () => {
   return (
-    <footer id="foot" className="text-left w-full  py-16">
+    <footer id="foot" className="text-left w-4/5 mx-auto py-16">
       <div className="container pt-5">
         <section>
           <div className="flex flex-wrap text-left">

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
 import { useParams } from "react-router-dom";
 import Card2 from "../../components/cards/Card2";
@@ -16,26 +16,27 @@ import OutletBanner from "../../components/outlet_banner/OutletBanner";
 import AboutUs from "../../components/about_us/AboutUs";
 import Highlights from "../../components/highlights/Highlights";
 import Model3D from "../../components/model3D/Model3D";
+import { url } from "../../components/api/Url";
+import UserContext from "../../context/UserContext";
 
 const SellerDetails = () => {
-  const [data2, setData2] = useState([]);
-  const [loader, setLoader] = useState(true);
-  const [error, setError] = useState(false);
   const { id } = useParams();
 
-  const url = "https://zulushop.in/app/v1/api/seller_list?id=85";
+  const {
+    sellerListdata,
+    setSellerListdata,
+    loader,
+    error,
+    setLoader,
+    setError,
+  } = useContext(UserContext);
 
   async function sellerList() {
+    // const json = JSON.stringify({ seller_id: "85" });
     try {
-      let response = await axios.post(url);
+      let response = await axios.post(url + "/app/v1/api/seller_list?id=85");
       let res = await response.data;
-      // console.log(res);
-      // let filteredProducts = res.filter((product) => product.slug === id);
-      // console.log("data is here", filteredProducts);
-      // setData2(filteredProducts[0]);
-      // setData2(filteredProducts);
-
-      setData2(res[0]);
+      setSellerListdata(res[0]);
       setLoader(false);
       setError(false);
     } catch (error) {
@@ -47,16 +48,15 @@ const SellerDetails = () => {
   useEffect(() => {
     sellerList();
   }, []);
+  // console.log("sellerListdata", sellerListdata);
 
-  let sliderImages = data2?.slider_images;
-
+  let sliderImages = sellerListdata?.slider_images;
   try {
     sliderImages = JSON.parse(sliderImages);
   } catch (error) {
     // console.error("Error parsing JSON:", error);
   }
-
-  // console.log(sliderImages)
+  // console.log(sliderImages);
 
   if (loader) {
     return (
@@ -77,7 +77,7 @@ const SellerDetails = () => {
 
   return (
     <>
-      <Header data2={data2} />
+      {/* <Header data2={sellerListdata} /> */}
       <CategoriesMenu />
       <Banner1 images={sliderImages} />
       <BrandsSection />

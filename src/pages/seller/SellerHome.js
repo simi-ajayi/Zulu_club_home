@@ -15,7 +15,7 @@ const SellerHome = () => {
   useEffect(() => {
     fetchData();
   }, []);
-  console.log(data);
+  // console.log(data);
   return (
     <>
       <h1 className="font-bold text-4xl mt-32 my-5">Zulu B2B section</h1>

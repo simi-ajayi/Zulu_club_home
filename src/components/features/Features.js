@@ -53,13 +53,15 @@ const Features = () => {
               </div>
               <div className="flex justify-between">
                 {productDetails.map((product) => (
-                // {item.product_details.productinfo.map((product) => (
-                  <Card3
-                    image={product.image}
-                    title={product.name}
-                    price={product.variants[0].price}
-                    discount={product.variants[0].special_price}
-                  />
+                  // {item.product_details.productinfo.map((product) => (
+                  <div key={product.id}>
+                    <Card3
+                      image={product.image}
+                      title={product.name}
+                      price={product.variants[0].price}
+                      discount={product.variants[0].special_price}
+                    />
+                  </div>
                 ))}
               </div>
             </div>

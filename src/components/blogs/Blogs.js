@@ -24,7 +24,7 @@ const Blogs = () => {
     getBrd();
   }, [])
 
-  console.log("Blogs", branddata);
+  // console.log("Blogs", branddata);
 
   return (
     <div className="mt-10">

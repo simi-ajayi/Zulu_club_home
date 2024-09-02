@@ -11,7 +11,7 @@ const Testimonials = () => {
     const json = JSON.stringify({ seller_id: "85" });
     axios.post(url + '/app/v1/api/listoftestimonal', json)
       .then((res) => {
-        console.log('data test' + JSON.stringify(res.data));
+        // console.log('data test' + JSON.stringify(res.data));
           setTest(res.data)
         // setBranddata([])
       })

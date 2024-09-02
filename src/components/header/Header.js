@@ -1,23 +1,25 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 // import "./headerSeller.css";
 import { IoMdSearch } from "react-icons/io";
 import { CgProfile } from "react-icons/cg";
 import { FaRegHeart } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import UserContext from "../../context/UserContext";
 
-const Header = ({ data2 }) => {
-  // console.log(data2[0])
-  const [color, setColor] = useState(data2.color_1)
-  const [color2, setColor2] = useState(data2.color_2)
+const Header = () => {
+  const { sellerListdata } = useContext(UserContext);
+  // console.log(sellerListdata[0])
+  const [color, setColor] = useState(sellerListdata.color_1);
+  const [color2, setColor2] = useState(sellerListdata.color_2);
   return (
     <header
       id="header"
-      className={`fixed top-0 w-4/5 mx-auto flex items-center bg-transparent z-10 bg-gradient-to-r from-[${color}] to-[#ad0b97] font-[${color2}] text-[${data2.text_color_1}]`}
+      className={`fixed top-0 w-4/5 mx-[10%] mt-[40px] flex items-center bg-transparent z-10 bg-gradient-to-r from-[${color}] to-[#ad0b97] font-[${color2}] text-[${sellerListdata.text_color_1}]`}
     >
       <div className="container mx-auto h-full flex justify-between items-center">
         <div className="w-8">
           <img
-            src={`https://zulushop.in/${data2.logo}`}
+            src={`https://zulushop.in/${sellerListdata.logo}`}
             className="w-full h-full"
             alt="Zulu Logo"
           />
