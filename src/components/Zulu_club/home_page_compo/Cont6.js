@@ -7,10 +7,9 @@ import a4 from "../../../assets/images/image2-4.webp";
 import a11 from "../../../assets/images/legacy-businesses.webp";
 const Cont6 = () => {
   return (
-    <div className="container mx-auto text-center py-12 pb-20  font-bold text-4xl text-white">
+    <div className="container mx-auto text-center mt-20 font-bold text-4xl text-white">
       <h1 className="pb-10 font-bold text-5xl">
-        World-className offering
-        <span className="highlight">tailor-made</span> for Indian businesses
+        We have just the right avatar waiting for you...
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="flex justify-center items-center flex-col card-item">
@@ -26,10 +25,7 @@ const Cont6 = () => {
               className="w-full h-auto absolute top-0 left-0 transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100"
             />
           </div>
-          <p className="text-center">
-            Legacy <br />
-            Businesses
-          </p>
+          <p className="text-center">Women <br /> & Beauty</p>
         </div>
         <div className="flex justify-center items-center flex-col   card-item">
           <div className="img-container">
@@ -44,10 +40,7 @@ const Cont6 = () => {
               className="w-full h-auto absolute top-0 left-0 transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100"
             />
           </div>
-          <p className="mt-2 text-center">
-            Rising <br />
-            Brands
-          </p>
+          <p className="mt-2 text-center">Menswear <br /> Brands</p>
         </div>
         <div className="flex justify-center items-center flex-col   card-item">
           <div className="img-container">
@@ -62,10 +55,7 @@ const Cont6 = () => {
               className="w-full h-auto absolute top-0 left-0 transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100"
             />
           </div>
-          <p className="mt-2 text-center">
-            D2C & <br />
-            Boutiques
-          </p>
+          <p className="mt-2 text-center">Kids <br /> Brands</p>
         </div>
         <div className="flex justify-center items-center flex-col  card-item">
           <div className="img-container">
@@ -80,10 +70,7 @@ const Cont6 = () => {
               className="w-full h-auto absolute top-0 left-0 transition-opacity duration-300 ease-in-out opacity-0 hover:opacity-100"
             />
           </div>
-          <p className="mt-2 text-center">
-            Private <br />
-            Labels
-          </p>
+          <p className="mt-2 text-center">Home <br /> Furnishing</p>
         </div>
       </div>
     </div>

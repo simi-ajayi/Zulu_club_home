@@ -50,7 +50,7 @@ const ProductPage = () => {
   };
 
   return (
-    <>
+    <div className="w-4/5 mx-auto">
       <div className="bg-gray-100 flex items-center justify-center text-left">
         <div className="w-full bg-white rounded-lg shadow-md p-6 flex flex-col justify-between lg:flex-row ">
           <div className="w-full lg:w-1/2 flex flex-col items-center">
@@ -170,7 +170,7 @@ const ProductPage = () => {
       >
         <FAQs />
       </CollapsibleSection>
-    </>
+    </div>
   );
 };
 

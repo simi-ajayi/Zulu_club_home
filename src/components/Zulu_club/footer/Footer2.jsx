@@ -5,8 +5,8 @@ import { FaInstagram } from "react-icons/fa";
 import { FaLinkedin } from "react-icons/fa";
 const Footer2 = () => {
   return (
-    <footer id="foot" className="text-left w-4/5 mx-auto py-16 text-white">
-      <div className="container pt-5">
+    <footer id="foot" className="py-16 text-white">
+      <div className="container w-full mx-auto  text-left pt-5">
         <section>
           <div className="flex flex-wrap text-left">
             <div className="w-full md:w-1/4  mt-3">
@@ -42,7 +42,7 @@ const Footer2 = () => {
         </section>
       </div>
       <hr className="border-none outline-none" />
-      <div className="container px-4 py-2 w-full">
+      <div className="container mx-auto  px-4 py-2 w-full">
         <div className="flex mb-3 float-right">
           <a href="#" className="px-2">
             <FaTwitter />

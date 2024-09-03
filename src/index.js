@@ -3,14 +3,18 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import reportWebVitals from "./reportWebVitals";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Layout from "./Layout";
+import Layout2 from "./Layout2";
 import SellerHome from "./pages/seller/SellerHome";
 import Test from "./pages/new/Test";
 import Test2 from "./pages/new/Test2";
 import ShopNowPage from "./pages/shop_now/ShopNowPage";
 import SellerDetails from "./pages/seller/SellerDetails";
 import ProductPage from "./pages/product_page/ProductPage ";
-import Home from "./pages/zulu_club/Home";
+import Layout from "./Layout";
+import HomePage from "./pages/zulu_club/HomePage";
+import BrandsPage from "./pages/zulu_club/BrandsPage";
+import PartnersPage from "./pages/zulu_club/PartnersPage";
+import AboutUsPage from "./pages/zulu_club/AboutUsPage";
 
 const router = createBrowserRouter([
   {
@@ -19,34 +23,51 @@ const router = createBrowserRouter([
     children: [
       {
         path: "",
-        element: <SellerHome />,
+        element: <HomePage />,
       },
       {
-        path: "/:id",
-        element: <SellerDetails />,
-        children: [],
+        path: "brands",
+        element: <BrandsPage />,
       },
       {
-        path: "/shopnowpage",
-        element: <ShopNowPage />,
+        path: "partners",
+        element: <PartnersPage />,
       },
       {
-        path: "/ProductPage ",
-        element: <ProductPage />,
-      },
-      {
-        path: "/test",
-        element: <Test />,
-      },
-      {
-        path: "/test2",
-        element: <Test2 />,
+        path: "aboutUs",
+        element: <AboutUsPage />,
       },
     ],
   },
   {
-    path: "/Home",
-    element: <Home />,
+    path: "/",
+    element: <Layout2 />,
+    children: [
+      {
+        path: "SellerHome",
+        element: <SellerHome />,
+      },
+      {
+        path: "SellerHome/:id",
+        element: <SellerDetails />,
+      },
+      {
+        path: "shopnowpage",
+        element: <ShopNowPage />,
+      },
+      {
+        path: "ProductPage ",
+        element: <ProductPage />,
+      },
+      {
+        path: "test",
+        element: <Test />,
+      },
+      {
+        path: "test2",
+        element: <Test2 />,
+      },
+    ],
   },
 ]);
 

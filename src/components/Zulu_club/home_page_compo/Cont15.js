@@ -1,5 +1,6 @@
 import React from "react";
 import "../../../pages/zulu_club/Home.css";
+import { Link } from "react-router-dom";
 
 const Cont15 = () => {
   const openForm = () => {
@@ -8,7 +9,7 @@ const Cont15 = () => {
 
   return (
     <div
-      className="cont15 container mx-auto bg-cover bg-center text-white my-10 py-20 rounded-[20px]"
+      className="cont15 container mx-auto bg-cover bg-center text-white mt-20 py-20 rounded-[20px]"
     >
       <div className="bg-color pt-5">
         <h6>
@@ -43,16 +44,16 @@ const Cont15 = () => {
           >
             Download App
           </button>
-          <a href="./pages/explore.html">
+          <Link to='/SellerHome'>
             <button className="btn1 mt-3 sm:mt-0 sm:ml-3 w-52">
               Explore
             </button>
-          </a>
-          <a href="http://zulushop.in/seller/login" target="_blank" rel="noopener noreferrer">
+          </Link>
+          <Link to="http://zulushop.in/seller/login">
             <button className="btn1 mt-3 sm:mt-0 sm:ml-3 w-52">
               Start on web
             </button>
-          </a>
+          </Link>
         </div>
       </div>
     </div>

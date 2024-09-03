@@ -11,8 +11,8 @@ import a8 from "../../../assets/images/img/18.png";
 import a9 from "../../../assets/images/img/19.png";
 const Cont4 = () => {
   return (
-    <div class="py-5 mt-5 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
-      <h1 class="pb-5 text-5xl font-bold">
+    <div class="mt-20 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
+      <h1 class="pb-12 text-5xl font-bold">
         Zulu helps you scale with next level solutions
       </h1>
       <div class="pt-3 mx-auto">

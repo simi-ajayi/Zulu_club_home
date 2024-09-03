@@ -100,11 +100,6 @@
     left: 100%;
     visibility: visible;
   }
-  #header {
-    height: 80px;
-    transition: all 0.5s;
-    background: #1f0a1dae;
-  }
   /* button */
   .btn1 {
     /* margin-left: 10px; */

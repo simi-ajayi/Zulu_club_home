@@ -2,8 +2,8 @@ import React from "react";
 
 const Pricecard = () => {
   return (
-    <section class="bg-transparent">
-      <div class="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
+    <section class="bg-transparent mt-20">
+      <div class="px-4 mx-auto max-w-screen-xl lg:px-6">
         <div class="mx-auto max-w-screen-lg text-center mb-8 lg:mb-12">
           <h2 class="mb-4 text-4xl tracking-tight font-extrabold text-gray-900 dark:text-white">
             ZULU Club has many tiers - choose your plan wisely
@@ -13,7 +13,7 @@ const Pricecard = () => {
           </p>
         </div>
         <div class="space-y-8 lg:grid lg:grid-cols-3 sm:gap-6 xl:gap-10 lg:space-y-0">
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border border-gray-100 shadow xl:p-8">
+          <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-white text-black rounded-lg border border-gray-100 shadow xl:p-8">
             <h3 class="mb-4 text-2xl font-semibold">Starter</h3>
             <p class="font-light sm:text-lg">
               Best option for personal use & for your next project.
@@ -112,7 +112,7 @@ const Pricecard = () => {
               Get started
             </a>
           </div>
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border border-gray-100 shadow xl:p-8">
+          <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-white text-black rounded-lg border border-gray-100 shadow xl:p-8">
             <h3 class="mb-4 text-2xl font-semibold">Company</h3>
             <p class="font-light  sm:text-lg ">
               Relevant for multiple users, extended & premium support.
@@ -211,7 +211,7 @@ const Pricecard = () => {
               Get started
             </a>
           </div>
-          <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-white rounded-lg border border-gray-100 shadow xl:p-8">
+          <div class="flex flex-col p-6 mx-auto max-w-lg text-center bg-white text-black rounded-lg border border-gray-100 shadow xl:p-8">
             <h3 class="mb-4 text-2xl font-semibold">Enterprise</h3>
             <p class="font-light  sm:text-lg">
               Best for large scale uses and extended redistribution rights.

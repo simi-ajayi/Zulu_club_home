@@ -10,10 +10,10 @@ import a14 from "../../../assets/images/private-labels.png.webp";
 import "../../../pages/zulu_club/Home.css";
 const Cont2 = () => {
   return (
-    <div className="container mx-auto text-center py-12 pb-20  font-bold text-4xl text-white">
+    <div className="container mx-auto text-center mt-20 font-bold text-4xl text-white">
       <h1 className="pb-10 font-bold text-5xl">
         World-className offering
-        <span className="highlight">tailor-made</span> for Indian businesses
+        <span className="highlight"> tailor-made</span> for Indian businesses
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
         <div className="flex justify-center items-center flex-col card-item">

@@ -23,7 +23,17 @@
 }
 .cont1 {
   height: 85vh;
+}
+.Home_page_image {
   background: url("../../assets/images/1.png") no-repeat center;
+  background-size: cover;
+}
+.Brands_page_image {
+  background: url("../../assets/images/2.png") no-repeat center;
+  background-size: cover;
+}
+.Partner_page_image {
+  background: url("../../assets/images/3.png") no-repeat center;
   background-size: cover;
 }
 .cont15 {
@@ -36,6 +46,14 @@
 }
 .Cont8 {
   /* background: url("../../assets/images/n4.webp") no-repeat center; */
+  background-size: cover;
+}
+.cont7 {
+  background: url("../../assets/images/n6.webp") no-repeat center;
+  background-size: cover;
+}
+.cont10 {
+  background: url("../../assets/images/n2.webp") no-repeat center;
   background-size: cover;
 }
 /* For background image and color */

@@ -1,13 +1,3 @@
-import "../../../pages/zulu_club//Home.css";
-import im1 from "../../../assets/images/a.png";
-import im2 from "../../../assets/images/b.png";
-import im3 from "../../../assets/images/c.png";
-import im4 from "../../../assets/images/d.png";
-import im5 from "../../../assets/images/e.png";
-import im6 from "../../../assets/images/f.png";
-import im7 from "../../../assets/images/g.png";
-import im8 from "../../../assets/images/h.png";
-import im9 from "../../../assets/images/i.png";
 import React, { useRef, useState } from "react";
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -20,6 +10,17 @@ import "../../cards/styles.css";
 
 // import required modules
 import { Autoplay, Navigation, Pagination } from "swiper/modules";
+
+import "../../../pages/zulu_club//Home.css";
+import im1 from "../../../assets/images/a.png";
+import im2 from "../../../assets/images/b.png";
+import im3 from "../../../assets/images/c.png";
+import im4 from "../../../assets/images/d.png";
+import im5 from "../../../assets/images/e.png";
+import im6 from "../../../assets/images/f.png";
+import im7 from "../../../assets/images/g.png";
+import im8 from "../../../assets/images/h.png";
+import im9 from "../../../assets/images/i.png";
 
 import a1 from "../../../assets/images/q11.webp";
 import a2 from "../../../assets/images/q12.webp";
@@ -36,8 +37,8 @@ const Cont3 = () => {
   //   }, 150);
   // }
   return (
-    <div className="cont3 py-5 mt-5 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
-    {/* // <div className="cont3  mx-auto text-center bg-cover bg-center py-10 text-white rounded-[20px]"> */}
+    <div className="cont3 py-5 mt-20 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
+      {/* // <div className="cont3  mx-auto text-center bg-cover bg-center py-10 text-white rounded-[20px]"> */}
       <div className="bg-color bg-transparent px-3">
         <h1 className="py-5 font-bold text-4xl">
           Zulu helps you with everything you need <br />
@@ -92,20 +93,20 @@ const Cont3 = () => {
                 }}
                 className="mySwiper"
               >
-                <SwiperSlide >
-                  <img src={a1} alt="" className="rounded-[10px]"/>
+                <SwiperSlide>
+                  <img src={a1} alt="" className="rounded-[10px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={a2} alt="" className="rounded-[10px]"/>
+                  <img src={a2} alt="" className="rounded-[10px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={a3} alt="" className="rounded-[10px]"/>
+                  <img src={a3} alt="" className="rounded-[10px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={a4} alt="" className="rounded-[10px]"/>
+                  <img src={a4} alt="" className="rounded-[10px]" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={a5} alt="" className="rounded-[10px]"/>
+                  <img src={a5} alt="" className="rounded-[10px]" />
                 </SwiperSlide>
               </Swiper>
             </div>

@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card1 from "../../components/cards/Card1";
+import Header from "../../components/header/Header";
+import Footer from "../../components/footer/Footer";
 
 const SellerHome = () => {
   const [data, setData] = useState([]);

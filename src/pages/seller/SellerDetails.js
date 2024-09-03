@@ -18,6 +18,7 @@ import Highlights from "../../components/highlights/Highlights";
 import Model3D from "../../components/model3D/Model3D";
 import { url } from "../../components/api/Url";
 import UserContext from "../../context/UserContext";
+import Footer from "../../components/footer/Footer";
 
 const SellerDetails = () => {
   const { id } = useParams();
@@ -77,7 +78,6 @@ const SellerDetails = () => {
 
   return (
     <>
-      {/* <Header data2={sellerListdata} /> */}
       <CategoriesMenu />
       <Banner1 images={sliderImages} />
       <BrandsSection />

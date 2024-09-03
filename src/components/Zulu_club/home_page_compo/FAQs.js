@@ -2,8 +2,8 @@ import React from "react";
 
 const FAQs = () => {
   return (
-    <section class="bg-white text-black py-10  text-left">
-      <div class="container flex flex-col justify-center p-4 mx-auto md:p-8">
+    <section class="mt-20 text-black py-10  text-left">
+      <div class="container bg-white w-full mx-auto flex flex-col justify-center p-4 md:p-8">
         <h2 class="mb-12 text-4xl font-bold leadi text-center sm:text-5xl">
           Frequently Asked Questions
         </h2>
@@ -87,7 +87,7 @@ const FAQs = () => {
                 If you have any questions, concerns, or need assistance, you can
                 reach our customer support team at 9911083755 during our
                 business hours, Monday to Saturday from 10 am to 6 pm. You can
-                also contact us via email at{" "}
+                also contact us via email at
                 <a href="" class="underline">
                   example@gmail.com
                 </a>

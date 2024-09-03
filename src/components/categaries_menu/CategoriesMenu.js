@@ -34,7 +34,7 @@ const CategoriesMenu = () => {
             view all
           </Link>
         </div>
-        <div className="flex justify-between mt-5 gap-8">
+        <div className="flex justify-between mt-5 gap-8 flex-wrap">
           {categoriesdata &&
             categoriesdata.map((user) => (
               <div key={user.id}>

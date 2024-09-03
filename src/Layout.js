@@ -1,23 +1,17 @@
 import React from "react";
 import { Outlet } from "react-router-dom";
-import Header from "./components/header/Header";
-import Footer from "./components/footer/Footer";
-import UserContextProvider from "./context/UserContextProvider";
-import SuperTopBar from "./components/super_top_bar/SuperTopBar";
+import HeaderMain from "./components/Zulu_club/header/HeaderMain";
+import Footer2 from "./components/Zulu_club/footer/Footer2";
+import './pages/zulu_club/Home.css'
 
-function Layout() {
+const Layout = () => {
   return (
-    <>
-      <UserContextProvider>
-        <SuperTopBar />
-        <Header />
-        <div className="container mx-auto w-4/5 text-center mt-20">
-          <Outlet />
-        </div>
-        <Footer />
-      </UserContextProvider>
-    </>
+    <div className="w-full px-[7.5%] pt-[80px] bg-[#1f0a1d] text-center text-white">
+      <HeaderMain />
+      <Outlet />
+      <Footer2 />
+    </div>
   );
-}
+};
 
 export default Layout;

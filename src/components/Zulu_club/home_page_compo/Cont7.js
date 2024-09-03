@@ -4,8 +4,7 @@ import "../../../pages/zulu_club/Home.css";
 import a1 from "../../../assets/images/image8.webp";
 const Cont7 = () => {
   return (
-    // <div className="mx-auto">
-    <div className="cont5 relative py-5 mx-auto w-[65%]">
+    <div className="cont5 relative mt-20 mx-auto w-[750px]">
       <img
         src={a1}
         alt="Description of the image"
@@ -19,7 +18,6 @@ const Cont7 = () => {
         </h1>
       </div>
     </div>
-    // </div>
   );
 };
 
