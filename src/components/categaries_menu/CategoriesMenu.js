@@ -13,7 +13,7 @@ const CategoriesMenu = () => {
       .post(url + "/app/v1/api/seller_category_list", json)
       .then((res) => {
         //    console.log('data' + JSON.stringify(res.data.message));
-        setCategoriesdata(res.data.message);
+        setCategoriesdata(res.data.message.slice(0, 8));
       })
       .catch(() => {
         setCategoriesdata([]);

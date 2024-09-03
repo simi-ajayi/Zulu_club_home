@@ -13,7 +13,7 @@ const Blogs = () => {
     axios.post(url + '/app/v1/api/listofblog', json)
       .then((res) => {
       //  console.log('data blog' + JSON.stringify(res.data.message));
-        setBranddata(res.data.message)
+        setBranddata(res.data.message.slice(0,4))
         // setBranddata([])
       })
       .catch(() => {
