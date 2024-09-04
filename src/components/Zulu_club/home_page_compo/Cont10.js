@@ -26,10 +26,10 @@ const Cont10 = () => {
             </a>
           </div>
           <div class="a1card w-full md:w-[29%] mt-3 md:mt-0">
-            <h4 class="font-bold">80% Cheaper</h4>
+            <h4 class="font-bold">Growth Engine</h4>
             <p class="text-white">
-              Zulu prices are much lower with 0 sales commissions. We will be
-              useful every hour & yet will be your smallest monthly bill.
+              Zulu gives you access to thousands of customers in your area to
+              grow you business multi-fold.
             </p>
             <a href="./pages/explore.html">
               <button class="btn1">Explore</button>

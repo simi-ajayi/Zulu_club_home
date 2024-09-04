@@ -35,14 +35,14 @@ const AboutUsPage = () => {
   ];
   const cont4Data = {
     title: "Zulu will win you over with excitement",
-    subtitle1: "Try at home - alter at home",
-    subtitle2: "Fashion concierge - at your service",
+    subtitle1: "Try before you buy - showroom at home",
+    subtitle2: "Alter at home - Fashion concierge",
     subtitle3: "Curated collection - Desi & Videsi",
     subtitle4: "Explore in 3d - before you try",
     a2: a2,
-    a3: a3,
+    a3: a5,
     a4: a4,
-    a5: a5,
+    a5: a3,
     a6: a6,
     a7: a7,
     a8: a8,

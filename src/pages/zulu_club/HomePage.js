@@ -41,7 +41,7 @@ const HomePage = () => {
   const cont4Data = {
     title: "Zulu helps you scale with next level solutions",
     subtitle1: "Website & Mobile App",
-    subtitle2: "B2B Market",
+    subtitle2: "Access to Fantastic brands",
     subtitle3: "Marketing & loyalty",
     subtitle4: "New Experiences",
     a2: a2,
@@ -68,7 +68,7 @@ const HomePage = () => {
       <Cont8 />
       <Cont9 />
       <Pricecard />
-      <FAQs />
+      {/* <FAQs /> */}
     </>
   );
 };
