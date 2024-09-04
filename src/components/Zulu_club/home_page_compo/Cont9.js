@@ -8,7 +8,7 @@ const Cont9 = () => {
   return (
     <div class="cont7 container mx-auto mt-20 w-11/12 bg-cover bg-center rounded-[20px]">
       <div class="steps-container py-2 pt-5 lg:py-20 ">
-        <h1 class="pb-3 lg:pb-5 px-2 text-black text-2xl lg:text-4xl font-bold text-center">
+        <h1 class="pb-3 lg:pb-10 px-2 text-black text-2xl lg:text-4xl font-bold text-center">
           You are 3 steps away from the club, take the 1st one.
         </h1>
         <div class="steps hidden px-5 md:flex flex-wrap justify-around items-center h-full">

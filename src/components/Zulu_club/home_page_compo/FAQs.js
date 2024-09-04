@@ -2,8 +2,8 @@ import React from "react";
 
 const FAQs = () => {
   return (
-    <section class="mt-20 text-black py-10  text-left">
-      <div class="container bg-white w-full mx-auto flex flex-col justify-center p-4 md:p-8">
+    <section class="mt-20 py-10  text-left">
+      <div class="container w-full mx-auto flex flex-col justify-center p-4 md:p-8">
         <h2 class="mb-12 text-4xl font-bold leadi text-center sm:text-5xl">
           Frequently Asked Questions
         </h2>

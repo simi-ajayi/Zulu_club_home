@@ -9,14 +9,14 @@ const Footer2 = () => {
       <div className="container w-full mx-auto  text-left pt-5">
         <section>
           <div className="flex flex-wrap text-left">
-            <div className="w-full md:w-1/4  mt-3">
+            <div className="w-full md:w-[30%]  mt-3">
               <h6 className="mb-4 font-bold text-lg">Company</h6>
               <p>About us</p>
               <p>Contact us</p>
               <p>Business</p>
               <p>Channel Partners</p>
             </div>
-            <div className="w-full md:w-1/4  mt-3">
+            <div className="w-full md:w-[30%]  mt-3">
               <h6 className="mb-4 font-bold text-lg">Legal</h6>
               <p>
                 <a href="#">Privacy Policy</a>
@@ -28,7 +28,7 @@ const Footer2 = () => {
                 <a href="#">Return Policy</a>
               </p>
             </div>
-            <div className="w-full md:w-1/4  mt-3">
+            <div className="w-full md:w-[30%]  mt-3">
               <h6 className="mb-4 font-bold text-lg text-left">Contact us</h6>
               <p>hi@zulu.club</p>
               <p> +91 85279 20080</p>

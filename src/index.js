@@ -15,6 +15,7 @@ import HomePage from "./pages/zulu_club/HomePage";
 import BrandsPage from "./pages/zulu_club/BrandsPage";
 import PartnersPage from "./pages/zulu_club/PartnersPage";
 import AboutUsPage from "./pages/zulu_club/AboutUsPage";
+import ConsumerPage from "./pages/zulu_club/ConsumerPage";
 
 const router = createBrowserRouter([
   {
@@ -22,7 +23,7 @@ const router = createBrowserRouter([
     element: <Layout />,
     children: [
       {
-        path: "",
+        path: "business",
         element: <HomePage />,
       },
       {
@@ -34,8 +35,12 @@ const router = createBrowserRouter([
         element: <PartnersPage />,
       },
       {
-        path: "aboutUs",
+        path: "",
         element: <AboutUsPage />,
+      },
+      {
+        path: "consumer",
+        element: <ConsumerPage />,
       },
     ],
   },

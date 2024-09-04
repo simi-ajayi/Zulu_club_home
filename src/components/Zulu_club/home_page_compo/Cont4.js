@@ -1,65 +1,64 @@
 import React from "react";
 import "../../../pages/zulu_club//Home.css";
 
-import a2 from "../../../assets/images/img/12.png";
-import a3 from "../../../assets/images/img/13.png";
-import a4 from "../../../assets/images/img/14.png";
-import a5 from "../../../assets/images/img/15.png";
-import a6 from "../../../assets/images/img/16.png";
-import a7 from "../../../assets/images/img/17.png";
-import a8 from "../../../assets/images/img/18.png";
-import a9 from "../../../assets/images/img/19.png";
-const Cont4 = () => {
+// import a2 from "../../../assets/images/img/12.png";
+// import a3 from "../../../assets/images/img/13.png";
+// import a4 from "../../../assets/images/img/14.png";
+// import a5 from "../../../assets/images/img/15.png";
+// import a6 from "../../../assets/images/img/16.png";
+// import a7 from "../../../assets/images/img/17.png";
+// import a8 from "../../../assets/images/img/18.png";
+// import a9 from "../../../assets/images/img/19.png";
+const Cont4 = ({ data }) => {
+  console.log("cont4",data)
   return (
     <div class="mt-20 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
-      <h1 class="pb-12 text-5xl font-bold">
-        Zulu helps you scale with next level solutions
-      </h1>
+      <h1 class="pb-12 text-4xl font-bold">{data.title}</h1>
       <div class="pt-3 mx-auto">
-        <div class="hidden new1 lg:grid w-[75%]  mx-auto">
+        <div class="hidden new1 lg:grid w-[85%] text-lg mx-auto">
           <div class="new-item1 flex flex-col items-center">
             <div class="img-container">
-              <img src={a2} alt="Image 4" class="w-full h-auto" />
+              <img src={data.a2} alt="Image 4" class="w-full h-auto" />
               <img
-                src={a3}
+                src={data.a3}
                 alt="Image 4"
                 class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
-            <h2 class="mt-4 text-xl font-semibold">Website & Mobile App</h2>
+            <h2 class="mt-4">{data.subtitle1}</h2>
           </div>
           <div class="new-item1 flex flex-col items-center">
             <div class="img-container">
-              <img src={a4} alt="Image 4" class="w-full h-auto" />
+              <img src={data.a4} alt="Image 4" class="w-full h-auto" />
               <img
-                src={a5}
+                src={data.a5}
                 alt="Image 4"
                 class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
-            <h2 class="mt-4 text-xl font-semibold">Website & Mobile App</h2>
+            <h2 class="mt-4">{data.subtitle2}</h2>
           </div>
           <div class="new-item1 flex flex-col items-center">
             <div class="img-container">
-              <img src={a6} alt="Image 4" class="w-full h-auto" />
+              <img src={data.a6} alt="Image 4" class="w-full h-auto" />
               <img
-                src={a7}
+                src={data.a7}
                 alt="Image 4"
                 class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
-            <h2 class="mt-4 text-xl font-semibold">Website & Mobile App</h2>
+            <h2 class="mt-4">{data.subtitle3}</h2>
           </div>
           <div class="new-item1 flex flex-col items-center">
             <div class="img-container">
-              <img src={a8} alt="Image 4" class="w-full h-auto" />
+              <img src={data.a8} alt="Image 4" class="w-full h-auto" />
               <img
-                src={a9}
+                src={data.a9}
                 alt="Image 4"
                 class="absolute inset-0 w-full h-full object-cover opacity-0 hover:opacity-100 transition-opacity duration-300"
               />
             </div>
-            <h2 class="mt-4 text-xl font-semibold">Website & Mobile App</h2>
+            <h2 class="mt-4">{data.subtitle4}</h2>
           </div>
         </div>
 

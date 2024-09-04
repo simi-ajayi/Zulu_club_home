@@ -8,7 +8,7 @@ import a11 from "../../../assets/images/legacy-businesses.webp";
 const Cont6 = () => {
   return (
     <div className="container mx-auto text-center mt-20 font-bold text-4xl text-white">
-      <h1 className="pb-10 font-bold text-5xl">
+      <h1 className="pb-10 font-bold text-4xl">
         We have just the right avatar waiting for you...
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

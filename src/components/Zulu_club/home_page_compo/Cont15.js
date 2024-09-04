@@ -16,13 +16,13 @@ const Cont15 = () => {
           <span className="text-xl font-bold"> | About Zulu</span>
         </h6>
 
-        <p className="mt-3 lg:mt-5">
+        <p className="mt-3 lg:mt-5 leading-[70px]">
           <span className="highlight text-4xl font-extrabold">
-            Zulu Club is a club for winners.
+            Zulu is a club for winners.
           </span>
         </p>
         <div className="about-text">
-          <p>
+          <p> 
             <strong className="font-bold">Fashion</strong> is a profitable, dynamic
             & competitive market.
           </p>

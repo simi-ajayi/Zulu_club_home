@@ -16,7 +16,7 @@ const Cont8 = () => {
           <h3 class="text-2xl lg:text-3xl">Best B2B network</h3>
           <h3 class="text-2xl lg:text-3xl">Best partnerships</h3>
           <h3 class="text-2xl lg:text-3xl">Best ops & planning</h3>
-          <button class="btn1 my-5">GET STARTED</button>
+          <button class="btn1 mt-12">GET STARTED</button>
         </div>
         <div class="inside-Right w-full lg:w-1/2 order-none lg:order-1">
           <img

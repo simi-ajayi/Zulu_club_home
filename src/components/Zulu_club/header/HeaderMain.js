@@ -39,8 +39,17 @@ const HeaderMain = () => {
           <div class="logo w-16">
             <img src={logo} class="w-full h-full" alt="ZULU Logo" />
           </div>
-          <nav id="navbar" class="hidden lg:flex items-center space-x-4">
+          <nav
+            id="navbar"
+            class="hidden lg:flex items-center space-x-12 uppercase"
+          >
             <Link to="/" class="text-white">
+              Home
+            </Link>
+            <Link to="/consumer" class="text-white">
+              Consumers
+            </Link>
+            <Link to="/business" class="text-white">
               Business
             </Link>
             <Link to="/brands" class="text-white">
@@ -49,9 +58,7 @@ const HeaderMain = () => {
             <Link to="/partners" class="text-white">
               Partners
             </Link>
-            <Link to="/aboutUs" class="text-white">
-              About Us
-            </Link>
+
             <Link to="/">
               <button class="px-4 py-2 rounded btn1">Get Started</button>
             </Link>

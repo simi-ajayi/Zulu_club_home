@@ -2,10 +2,10 @@ import React from "react";
 
 const Cont10 = () => {
   return (
-    <div class="cont10 container w-full mx-auto mt-20 py-10 bg-cover bg-center">
+    <div class="cont10 container w-full mx-auto mt-20 py-10 bg-cover bg-center rounded-[20px]">
       <div class="bg-color bg-transparent">
         <div class="a1Cards hidden md:flex flex-wrap justify-around py-5 px-3 items-center">
-          <div class="a1card w-full md:w-1/4">
+          <div class="a1card w-full md:w-[29%]">
             <h4 class="font-bold">10x Better</h4>
             <p>
               Our website is way more powerful, it has countless more features &
@@ -15,7 +15,7 @@ const Cont10 = () => {
               <button class="btn1">Explore</button>
             </a>
           </div>
-          <div class="a1card w-full md:w-1/4 mt-3 md:mt-0">
+          <div class="a1card w-full md:w-[29%] mt-3 md:mt-0">
             <h4 class="font-bold">Fashion Focus</h4>
             <p>
               We are the only solution tailor-made for Indian Fashion
@@ -25,7 +25,7 @@ const Cont10 = () => {
               <button class="btn1">Explore</button>
             </a>
           </div>
-          <div class="a1card w-full md:w-1/4 mt-3 md:mt-0">
+          <div class="a1card w-full md:w-[29%] mt-3 md:mt-0">
             <h4 class="font-bold">80% Cheaper</h4>
             <p class="text-white">
               Zulu prices are much lower with 0 sales commissions. We will be
@@ -37,6 +37,7 @@ const Cont10 = () => {
           </div>
         </div>
 
+        {/* mobile view */}
         <div class="a1Cards block md:hidden">
           <div
             id="carouselExampleAutoplaying"

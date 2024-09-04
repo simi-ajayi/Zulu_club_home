@@ -40,12 +40,11 @@ const Cont3 = () => {
     <div className="cont3 py-5 mt-20 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
       {/* // <div className="cont3  mx-auto text-center bg-cover bg-center py-10 text-white rounded-[20px]"> */}
       <div className="bg-color bg-transparent px-3">
-        <h1 className="py-5 font-bold text-4xl">
-          Zulu helps you with everything you need <br />
-          to run your business
+        <h1 className="py-8 font-bold text-4xl">
+          Zulu gives you everything you need to grow
         </h1>
-        <div className="main-content pb-3 flex flex-wrap justify-evenly">
-          <div className="main-cont-L w-full lg:w-5/12 mt-4 lg:mt-0 order-1 lg:order-none">
+        <div className="main-content pb-3 flex flex-wrap justify-evenly mt-10">
+          <div className="main-cont-L w-full lg:w-[40%] mt-4 lg:mt-0 order-1 lg:order-none">
             <div className="new-item">
               <img src={im1} alt="Image 1" />
             </div>
@@ -110,9 +109,8 @@ const Cont3 = () => {
                 </SwiperSlide>
               </Swiper>
             </div>
-            <p className="leading-snug mt-3 text-sm text-center hidden lg:block">
-              Zulu is the only technology solution you will ever need. All the
-              tools that you already use & many more that you never dreamt of.
+            <p className="leading-snug mt-7 text-[1.2rem] text-center hidden lg:block">
+              Zulu is the only technology solution you will ever need. 
             </p>
             <div className="img hidden">
               <img className="banner1" src="./images/qw.webp" alt="Banner 1" />

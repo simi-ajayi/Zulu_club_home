@@ -301,7 +301,7 @@ input:checked + label .description5 {
 }
 .h42 p {
   color: #dbaf75;
-  text-align: justify;
+  /* text-align: justify; */
   font-size: 1rem;
   padding: 10px 15px;
   line-height: 30px;
@@ -439,14 +439,14 @@ input:checked + label .description5 {
   border-radius: 10px;
   background: #1f0a1dd0;
   color: white;
-  padding: 20px 38px 50px;
+  padding: 50px 38px;
   /* width: 28%; */
   text-align: center;
   font-size: 1.5em;
   font-family: "Raleway";
 }
-.a1card h4 strong {
-  font-size: 35px;
+.a1card h4 {
+  font-size: 34px;
   text-align: center;
   line-height: 100px;
   color: #ffde59;
@@ -863,7 +863,7 @@ input:checked + label .description5 {
 .new-item {
   margin: 0 auto;
   aspect-ratio: 1/1;
-  width: 135px;
+  width: 125px;
   cursor: pointer;
 }
 .new-item img {
@@ -890,7 +890,7 @@ input:checked + label .description5 {
 
 .new1 {
   grid-template-columns: repeat(2, 1fr);
-  gap: 35px;
+  gap: 60px;
 }
 .new-item1 {
   display: flex;
@@ -936,15 +936,15 @@ input:checked + label .description5 {
 }
 
 .new-item1 h2 {
-  margin-top: 12px;
-  font-size: 1.5rem;
-  font-weight: bold;
-  color: white; /* Adjust text color */
-  text-align: center;
+  /* margin-top: 12px; */
+  /* font-size: 1.5rem; */
+  /* font-weight: bold; */
+  /* color: white;  */
+  /* text-align: center; */
 }
 .about-text p {
   font-size: 25px;
-  line-height: 50px;
+  line-height: 60px;
 }
 
 @media (max-width: 768px) {
