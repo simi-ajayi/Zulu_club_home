@@ -1,10 +1,19 @@
 import React, { useState, useEffect } from "react";
 import "./HeaderMain.css";
 import logo from "../../../assets/images/zulu-logo-3.png";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
+import { IoMdMenu } from "react-icons/io";
+import { IoMdClose } from "react-icons/io";
+import Popup from "../Popup";
 const HeaderMain = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
+
+  const toggleMenu = () => {
+    setIsMenuOpen(!isMenuOpen);
+  };
 
   const handleScroll = () => {
     const currentScrollPos = window.pageYOffset;
@@ -25,93 +34,132 @@ const HeaderMain = () => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, [prevScrollPos]);
+
+  //Popup
+  const handleOpenPopup = () => {
+    setIsPopupVisible(true);
+  };
+
+  const handleClosePopup = () => {
+    setIsPopupVisible(false);
+  };
   return (
     <div>
       <header
         id="header"
-        class="fixed top-0 px-[7.5%] w-full h-20  right-0 z-10 flex items-center justify-center bg-[#1f0a1dae]"
+        className="fixed top-0 px-[7.5%] w-full h-20  right-0 z-10 flex items-center justify-center bg-[#1f0a1dae]"
         style={{
           top: visible ? "0" : "-80px",
           transition: "top 0.5s",
         }}
       >
-        <div class="container flex items-center justify-between h-full">
-          <div class="logo w-16">
-            <img src={logo} class="w-full h-full" alt="ZULU Logo" />
+        <div className="container flex items-center justify-between h-full">
+          <div className="logo w-16">
+            <img src={logo} className="w-full h-full" alt="ZULU Logo" />
           </div>
           <nav
             id="navbar"
-            class="hidden lg:flex items-center space-x-12 uppercase"
+            className="hidden lg:flex items-center space-x-12 uppercase"
           >
-            <Link to="/" class="text-white">
+            <NavLink
+              to="/"
+              className={({ isActive }) =>
+                isActive ? "text-[#ffde59]" : "text-white"
+              }
+            >
               Home
-            </Link>
-            <Link to="/consumer" class="text-white">
+            </NavLink>
+            <NavLink
+              to="/consumer"
+              className={({ isActive }) =>
+                isActive ? "text-[#ffde59]" : "text-white"
+              }
+            >
               Consumers
-            </Link>
-            <Link to="/business" class="text-white">
+            </NavLink>
+            <NavLink
+              to="/business"
+              className={({ isActive }) =>
+                isActive ? "text-[#ffde59]" : "text-white"
+              }
+            >
               Business
-            </Link>
-            <Link to="/brands" class="text-white">
+            </NavLink>
+            <NavLink
+              to="/brands"
+              className={({ isActive }) =>
+                isActive ? "text-[#ffde59]" : "text-white"
+              }
+            >
               Brands
-            </Link>
-            <Link to="/partners" class="text-white">
+            </NavLink>
+            <NavLink
+              to="/partners"
+              className={({ isActive }) =>
+                isActive ? "text-[#ffde59]" : "text-white"
+              }
+            >
               Partners
-            </Link>
+            </NavLink>
 
             <Link to="/">
-              <button class="px-4 py-2 rounded btn1">Get Started</button>
+              {/* <button className="px-4 py-2 rounded btn1">Get Started</button> */}
+              <button
+                className="px-4 py-2 rounded btn1"
+                onClick={handleOpenPopup}
+              >
+                Waiting List
+              </button>
             </Link>
           </nav>
-          <div class="lg:hidden flex items-center">
-            <i class="ri-menu-line me-3 text-white text-2xl" id="menu-open"></i>
-            <i
-              class="ri-close-line hidden text-white text-2xl"
-              id="menu-close"
-            ></i>
+          <div className="lg:hidden flex items-center">
+            {/* <IoMdMenu />
+            <IoMdClose /> */}
           </div>
         </div>
       </header>
 
+      <Popup isVisible={isPopupVisible} onClose={handleClosePopup} />
+
       {/* <!-- Mobile Menu --> */}
       <div
-        class="fixed top-0 left-0 h-full w-1/2 bg-[#1f0a1d] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out"
+        className="fixed top-0 left-0 h-full w-1/2 bg-[#1f0a1d] z-50 transform -translate-x-full transition-transform duration-300 ease-in-out"
         id="mobile-menu"
       >
-        <ul class="flex flex-col items-start p-4 text-white space-y-4">
+        <ul className="flex flex-col items-start p-4 text-white space-y-4">
           <li>
-            <a href="/" class="font-poppins font-semibold text-3xl">
+            <a href="/" className="font-poppins font-semibold text-3xl">
               ZULU
             </a>
           </li>
           <li>
-            <a href="/" class="text-xl">
+            <a href="/" className="text-xl">
               Home
             </a>
           </li>
           <li>
-            <a href="/" class="text-xl">
+            <a href="/" className="text-xl">
               Business
             </a>
           </li>
           <li>
-            <a href="./pages/brands.html" class="text-xl">
+            <a href="./pages/brands.html" className="text-xl">
               Brands
             </a>
           </li>
           <li>
-            <a href="./pages/partners.html" class="text-xl">
+            <a href="./pages/partners.html" className="text-xl">
               Partners
             </a>
           </li>
           <li>
-            <a href="./pages/aboutus.html" class="text-xl">
+            <a href="./pages/aboutus.html" className="text-xl">
               About Us
             </a>
           </li>
           <li>
             <a href="#">
-              <div class="bg-blue-500 text-white px-4 py-2 rounded">
+              <div className="bg-blue-500 text-white px-4 py-2 rounded">
                 Get Started
               </div>
             </a>

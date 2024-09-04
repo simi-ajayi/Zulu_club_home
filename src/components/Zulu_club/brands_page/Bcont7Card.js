@@ -12,7 +12,7 @@ const Bcont7Card = ({ data, title, width1, width2, bgimg }) => {
               <div className="thought" key={index}>
                 <div className="num">{item.num}</div>
                 <div className={`tSpan1 w-[400px]`}>{item.tSpan1}</div>
-                <div className={`tSpan2 w-[600px]`}>{item.tSpan2}</div>
+                <div className={`tSpan2 w-[520px]`}>{item.tSpan2}</div>
               </div>
             );
           })}

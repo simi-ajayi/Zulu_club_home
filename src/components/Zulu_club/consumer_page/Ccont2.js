@@ -2,7 +2,7 @@ import React from "react";
 import "../../../assets/style/aboutus_page.css";
 import logo from "../../../assets/images/zulu-logo-2.png";
 
-const Acont1 = () => {
+const Ccont2 = () => {
   return (
     <div>
       <div className="Acont1 container mb-5 bg-cover bg-center mt-20 rounded-[20px]">
@@ -21,7 +21,7 @@ const Acont1 = () => {
               alt=""
             />
           </div> */}
-          <p className="text-xl mt-72 py-8 font-light px-2 leading-[50px] text-[#c9c3c9] bg-[#1f0a1dd7]">
+          <p className="text-xl mt-24 py-8 font-light px-2 leading-[50px] text-[#c9c3c9] bg-[#1f0a1dd7]">
             Fashion is all about excitement.
             <br />
             Excitement comes from something new and better.
@@ -31,11 +31,13 @@ const Acont1 = () => {
             Zulu was born to find & deliver that excitement to you - in person
             & online.
           </p>
-          <div className="h-[10] w-full"></div>
+          <div className="h-[10] w-full mt-20 pb-10">
+            <p className="text-2xl">Waiting list...</p>
+          </div>
         </div>
       </div>
     </div>
   );
 };
 
-export default Acont1;
+export default Ccont2;
