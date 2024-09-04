@@ -14,7 +14,7 @@ const BrandsSection = () => {
     axios.post(url + '/app/v1/api/get_brand_data_product_web', json)
       .then((res) => {
        // console.log('data brand' + JSON.stringify(res.data.message));
-        setBranddata(res.data.message)
+        setBranddata(res.data.message.slice(0,8))
        // setBranddata([])
       })
       .catch(() => {

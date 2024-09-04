@@ -12,7 +12,7 @@ const Testimonials = () => {
     axios.post(url + '/app/v1/api/listoftestimonal', json)
       .then((res) => {
         // console.log('data test' + JSON.stringify(res.data));
-          setTest(res.data)
+          setTest(res.data.slice(0,4))
         // setBranddata([])
       })
       .catch(() => {
