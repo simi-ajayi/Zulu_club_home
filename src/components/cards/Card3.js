@@ -4,11 +4,11 @@ import { url } from "../api/Url";
 
 const Card3 = ({ image, title, price, discount }) => {
   return (
-    <div className="w-[200px]">
+    <div className="">
       {/* <div className="rounded-xl shadow-md overflow-hidden bg-slate-100 group h-[350px] w-1/5"> */}
       <img
         src={`${url}/${image}`}
-        className="w-full h-[300px] bg-slate-500 object-cover"
+        className="w-[200px] h-[300px] object-contain"
         alt=""
       />
       <p>{title}</p>

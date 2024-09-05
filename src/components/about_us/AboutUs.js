@@ -1,27 +1,26 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
-const AboutUs = () => {
+const   AboutUs = ({ data }) => {
   return (
-    <div className="flex gap-20 mt-20">
-      <div className="text-left w-1/2">
-        <h1 className="text-5xl">About Us</h1>
-        <p className="text-justify mt-5">
-          Helping businesses deliver exceptional buyer experiences. Vidyard is
-          the leading video messaging and asynchronous communications platform
-          for go-to-market teams. Millions of sales professionals and more than
-          250,000 go-to-market teams use Vidyard's AI-powered video messaging,
-          video hosting, and digital sales rooms to connect with more prospects
-          and generate more revenue.
-        </p>
+    <>
+      <div className="">
+        <h1></h1>
       </div>
-      <div className="w-1/2">
-        <img 
-          src="https://zulushop.in/uploads/seller/Frame_1300931.png"
-          alt="Vidyard About Us"
-          className="rounded-xl"
-        />
-      </div>
-    </div>
+      
+        <div className="text-left flex flex-col gap-2">
+            <h1 className="text-left font-bold text-[22px]" style={{ color: `${data?.component?.image_gallery?.color}` }}>{data?.component?.aboutus?.title}</h1>
+            {data?.component?.aboutus?.text}
+          </div>
+        
+        <div className="w-full mt-5">
+          <img
+            src="https://zulushop.in/uploads/seller/Frame_1300931.png"
+            alt="Vidyard About Us"
+            className="rounded-xl"
+          />
+        </div>
+    </>
   );
 };
 

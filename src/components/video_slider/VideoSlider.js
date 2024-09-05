@@ -2,12 +2,13 @@ import React from "react";
 import { Card4 } from "../cards/Blogcard";
 import { Link } from "react-router-dom";
 
-const VideoSlider = () => {
+const VideoSlider = ({data}) => {
+  
   return (
     <div>
       <div className="mt-10">
         <div className="flex justify-between items-center">
-          <h1 className="text-left font-bold text-2xl">Video slider</h1>
+          <h1 className="text-left font-bold text-[22px]" style={{color:`${data?.component?.image_gallery?.color}`}}>{data?.component?.studio?.title}</h1>
           <Link to="" className="text-blue-700">
             view all
           </Link>

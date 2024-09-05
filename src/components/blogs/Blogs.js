@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { url } from "../api/Url";
 import axios from "axios";
 
-const Blogs = () => {
+const Blogs = ({data}) => {
 
   const [branddata, setBranddata] = useState([]);
 
@@ -29,14 +29,14 @@ const Blogs = () => {
   return (
     <div className="mt-10">
       <div className="flex justify-between items-center">
-        <h1 className="text-left font-bold text-2xl">Blogs
+        <h1 className="text-left font-bold text-[22px]" style={{color:`${data?.component?.image_gallery?.color}`}}>{data?.component?.blog?.title}
             {/* {JSON.stringify(branddata)}  */}
         </h1>
         <Link to="" className="text-blue-700">
           view all
         </Link>
       </div>
-      <div className="flex justify-between gap-8 mt-5">
+      <div className="flex flex-wrap justify-between gap-8 mt-5">
         {branddata && branddata.map(user => (
 
           <Blogcard key={user.id} className="p-4" id={user.id}

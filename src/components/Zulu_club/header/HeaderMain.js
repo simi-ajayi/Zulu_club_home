@@ -108,7 +108,7 @@ const HeaderMain = () => {
                 className="px-4 py-2 rounded btn1"
                 onClick={handleOpenPopup}
               >
-                Waiting List
+                Wait List
               </button>
             </Link>
           </nav>
