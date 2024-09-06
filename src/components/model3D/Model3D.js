@@ -27,7 +27,7 @@ const Model3D = ({ data }) => {
     
     try {
       let response = await axios.post(
-        'https://zulushop.in/get_video/85'
+        url + '/get_video/85'
       );
       let data = await response.data.message;
       console.log("video",data)

@@ -56,22 +56,11 @@ const SellerDetails = () => {
     }
   }
 
-  async function videolist() {
-    alert('test');
-    // const json = JSON.stringify({ seller_id: "85" });
-    try {
-      let response = await axios.post(url + "/app/v1/api/get_all_videos_seller?seller_id=85");
-      let res = await response.data;
-      console.log(res[0]);
-    
-    } catch (error) {
-    
-    }
-  }
+  
 
   useEffect(() => {
     sellerList();
-    videolist();
+    
   }, []);
   // console.log("sellerListdata", sellerListdata);
 
