@@ -26,8 +26,8 @@ const Bcont8 = () => {
           answer
         </h1>
       </div>
-      <div className="flex justify-evenly items-center mt-10">
-        <div className="w-[600px] h-[400px]">
+      <div className="flex justify-evenly flex-wrap items-center mt-10">
+        <div className="w-[100%] h-[100%]">
           <Swiper
             navigation={true}
             modules={[Pagination, Navigation, Autoplay]}
@@ -62,7 +62,7 @@ const Bcont8 = () => {
             </SwiperSlide>
           </Swiper>
         </div>
-        <div className="w-[35%]">
+        <div className="">
           <ul className="ml-10 ">
             <li>Create a differentiation</li>
             <li>Truly engage the consumer</li>

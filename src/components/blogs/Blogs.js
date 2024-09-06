@@ -36,13 +36,14 @@ const Blogs = ({data}) => {
           view all
         </Link>
       </div>
-      <div className="flex flex-wrap justify-between gap-8 mt-5">
+      <div className="flex flex-wrap justify-center md:justify-between gap-8 mt-5">
         {branddata && branddata.map(user => (
 
           <Blogcard key={user.id} className="p-4" id={user.id}
             title={user.Title}
             Blogimage={`uploads/seller/${user.Blogimage}`}
-            name={"blog"} width={"31%"}
+            name={"blog"} 
+            // width={"31%"}
           />
         ))}
       </div>

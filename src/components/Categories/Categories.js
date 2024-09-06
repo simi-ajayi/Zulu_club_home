@@ -33,7 +33,7 @@ const Categories = ({data}) => {
           view all
         </Link>
       </div>
-      <div className="flex justify-between gap-8 mt-5">
+      <div className="flex flex-wrap justify-center md:justify-between gap-8 mt-5">
         {categoriesdata.map((item,index) => (
           <Link to="/" key={index}>
             {/* <Link to={`/categories/${item.category_id}`} key={item.category_id}> */}

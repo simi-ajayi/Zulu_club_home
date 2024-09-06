@@ -39,7 +39,7 @@ const CategoriesMenu = ({data}) => {
           {/* {
             data?.component?.image_gallery?.gallery === 
           } */}
-          <div className="flex justify-between mt-5 gap-8 flex-wrap"> 
+          <div className="flex justify-center md:justify-between mt-5 gap-5 md:gap-8 flex-wrap"> 
           {categoriesdata &&
             categoriesdata.map((user) => (
               <div key={user.id}>

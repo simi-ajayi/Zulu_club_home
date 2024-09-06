@@ -15,8 +15,8 @@ const Cont4 = ({ data }) => {
     <div class="mt-20 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
       <h1 class="pb-12 text-4xl font-bold">{data.title}</h1>
       <div class="pt-3 mx-auto">
-        <div class="hidden new1 lg:grid w-[85%] text-lg mx-auto">
-          <div class="new-item1 flex flex-col items-center">
+        <div class="new1 justify-center flex flex-wrap text-lg mx-auto">
+          <div class="new-item1 flex flex-col flex-wrap items-center">
             <div class="img-container">
               <img src={data.a2} alt="Image 4" class="w-full h-auto" />
               <img
@@ -27,7 +27,7 @@ const Cont4 = ({ data }) => {
             </div>
             <h2 class="mt-4">{data.subtitle1}</h2>
           </div>
-          <div class="new-item1 flex flex-col items-center">
+          <div class="new-item1 flex flex-col flex-wrap items-center">
             <div class="img-container">
               <img src={data.a4} alt="Image 4" class="w-full h-auto" />
               <img

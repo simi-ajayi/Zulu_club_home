@@ -46,7 +46,7 @@ const Highlights = ({data}) => {
             view all
           </Link>
         </div>
-        <div className="flex gap-5 flex-wrap mt-10 mb-5 items-center">
+        <div className="flex gap-5 flex-wrap mt-10 mb-5 justify-center items-center">
           {featureData.map((item) => {
             return (
               <div key={item.id} className="banner">

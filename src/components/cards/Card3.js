@@ -8,7 +8,7 @@ const Card3 = ({ image, title, price, discount }) => {
       {/* <div className="rounded-xl shadow-md overflow-hidden bg-slate-100 group h-[350px] w-1/5"> */}
       <img
         src={`${url}/${image}`}
-        className="w-[200px] h-[300px] object-contain"
+        className="w-full h-[300px]"
         alt=""
       />
       <p>{title}</p>

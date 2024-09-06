@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderMain from "../../components/Zulu_club/header/HeaderMain";
-import "./Home.css";
+// import "./Home.css";
 import Cont1 from "../../components/Zulu_club/home_page_compo/Cont1";
 import Cont15 from "../../components/Zulu_club/home_page_compo/Cont15";
 import Cont3 from "../../components/Zulu_club/home_page_compo/Cont3";
@@ -60,7 +60,8 @@ const HomePage = () => {
       <Cont15 />
       <Cont2 />
       <Cont3 />
-      <Cont4 data={cont4Data} />
+      {/* hidden carousal */}
+      <Cont4 data={cont4Data} /> 
       <Cont5 />
       <Cont6 />
       <Cont7 />

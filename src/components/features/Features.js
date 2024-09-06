@@ -49,7 +49,7 @@ const Features = ({data}) => {
                   view all
                 </Link>
               </div>
-              <div className="flex justify-between flex-wrap items-center">
+              <div className="flex justify-center md:justify-between flex-wrap items-center">
                 {productDetails.map((product) => (
                   // {item.product_details.productinfo.map((product) => (
                   <div key={product.id}>

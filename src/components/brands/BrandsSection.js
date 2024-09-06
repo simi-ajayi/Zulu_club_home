@@ -36,7 +36,7 @@ const BrandsSection = ({data}) => {
 
         <Link to='' className="text-blue-700">view all</Link>
       </div>
-      <div className="flex flex-wrap justify-between mt-5">
+      <div className="flex flex-wrap justify-center md:justify-between mt-5">
 
         {branddata && branddata.map(user => (
 
