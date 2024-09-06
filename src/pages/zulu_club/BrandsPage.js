@@ -6,7 +6,7 @@ import Bcont8 from "../../components/Zulu_club/brands_page/Bcont8";
 import Bcont11 from "../../components/Zulu_club/brands_page/Bcont11";
 import Bcont12 from "../../components/Zulu_club/brands_page/Bcont12";
 import Cont5 from "../../components/Zulu_club/home_page_compo/Cont5";
-import "./Home.css";
+// import "./Home.css";
 import Bcont7Card2 from "../../components/Zulu_club/brands_page/Bcont7Card2";
 
 const BrandsPage = () => {

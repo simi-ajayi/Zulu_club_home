@@ -4,9 +4,9 @@ import { url } from "../api/Url";
 import axios from "axios";
 import { Link } from "react-router-dom";
 
-const CategoriesMenu = () => {
+const CategoriesMenu = ({data}) => {
   const [categoriesdata, setCategoriesdata] = useState([]);
-
+// console.log("categories data",data)
   const getCat = async () => {
     const json = JSON.stringify({ seller_id: "85" });
     axios
@@ -14,6 +14,7 @@ const CategoriesMenu = () => {
       .then((res) => {
         //    console.log('data' + JSON.stringify(res.data.message));
         setCategoriesdata(res.data.message.slice(0, 8));
+        // console.log(res,'res')
       })
       .catch(() => {
         setCategoriesdata([]);
@@ -25,16 +26,20 @@ const CategoriesMenu = () => {
   return (
     <div className="mt-10">
       <div className="mt-5">
-        <div className="flex justify-between mt-10 mb-5 items-center">
+        {/* <div className="flex justify-between mt-10 mb-5 items-center">
           <div className="">
             <h1 className="text-left font-bold text-2xl">Categories</h1>
             {/* {JSON.stringify(categoriesdata)} */}
-          </div>
+          {/* </div>
           <Link to="" className="text-blue-700">
             view all
-          </Link>
-        </div>
-        <div className="flex justify-between mt-5 gap-8 flex-wrap">
+          </Link> */}
+        {/* </div> */}
+        <div className="">
+          {/* {
+            data?.component?.image_gallery?.gallery === 
+          } */}
+          <div className="flex justify-center md:justify-between mt-5 gap-5 md:gap-8 flex-wrap"> 
           {categoriesdata &&
             categoriesdata.map((user) => (
               <div key={user.id}>
@@ -48,6 +53,7 @@ const CategoriesMenu = () => {
                 />
               </div>
             ))}
+            </div>
         </div>
       </div>
     </div>

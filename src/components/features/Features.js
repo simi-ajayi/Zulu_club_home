@@ -3,7 +3,7 @@ import Card3 from "../cards/Card3";
 import { Link } from "react-router-dom";
 import axios from "axios";
 
-const Features = () => {
+const Features = ({data}) => {
   const [featureData, setFeatureData] = useState([]);
   // const [product, setProduct] = useState([]);
 
@@ -41,17 +41,15 @@ const Features = () => {
           return (
             <div key={item.id}>
               <div className="flex justify-between mt-10 mb-5 items-center">
-                <div className="">
-                  <h1 className="text-left font-bold text-2xl">{item.title}</h1>
-                  <p>{item.short_description}</p>
-
-                  {/* <p>{item.variants.price}</p> */}
+                <div className="flex flex-col gap-2">
+                  <h1 className="text-left font-bold text-[22px]" style={{color:`${data?.component?.image_gallery?.color}`}}>{item.title}</h1>
+                  <p className="text-left">{item.short_description}</p>
                 </div>
                 <Link to="" className="text-blue-700">
                   view all
                 </Link>
               </div>
-              <div className="flex justify-between">
+              <div className="flex justify-center md:justify-between flex-wrap items-center">
                 {productDetails.map((product) => (
                   // {item.product_details.productinfo.map((product) => (
                   <div key={product.id}>

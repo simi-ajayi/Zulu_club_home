@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./HeaderMain.css";
 import logo from "../../../assets/images/zulu-logo-3.png";
 import { Link, NavLink } from "react-router-dom";
@@ -8,11 +8,17 @@ import Popup from "../Popup";
 const HeaderMain = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(true);
   const [isPopupVisible, setIsPopupVisible] = useState(false);
-
+  const menuRef = useRef(null)
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
+    menuRef.current.classList.toggle('show__menu')
+    if(isMenuOpen ){
+      setIsMenuOpen(false);
+    }
+    else{
+      setIsMenuOpen(true);
+    }
   };
 
   const handleScroll = () => {
@@ -59,7 +65,7 @@ const HeaderMain = () => {
           </div>
           <nav
             id="navbar"
-            className="hidden lg:flex items-center space-x-12 uppercase"
+            className="hidden lg:flex items-center space-x-12 uppercase" ref={menuRef}
           >
             <NavLink
               to="/"
@@ -108,13 +114,15 @@ const HeaderMain = () => {
                 className="px-4 py-2 rounded btn1"
                 onClick={handleOpenPopup}
               >
-                Waiting List
+                Wait List
               </button>
             </Link>
           </nav>
-          <div className="lg:hidden flex items-center">
-            {/* <IoMdMenu />
-            <IoMdClose /> */}
+          <div className="lg:hidden flex items-center" onClick={toggleMenu}>
+            {
+              isMenuOpen ? <IoMdMenu className="text-xl"/> : <IoMdClose className="text-xl"/>
+            }
+            
           </div>
         </div>
       </header>

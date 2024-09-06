@@ -6,7 +6,7 @@ import { url } from "../api/Url";
 import axios from "axios";
 
 
-const BrandsSection = () => {
+const BrandsSection = ({data}) => {
   const [branddata, setBranddata] = useState([]);
 
   const getBrd = async () => {
@@ -31,16 +31,16 @@ const BrandsSection = () => {
       <div className="flex justify-between items-center">
 
 
-        <h1 className="text-left font-bold text-2xl">Brands</h1>
+        <h1 className="text-left font-bold text-[22px] mb-2" style={{color:`${data?.component?.image_gallery?.color}`}}>{data?.component?.brand?.title}</h1>
         {/*   {JSON.stringify(branddata)}  */}
 
         <Link to='' className="text-blue-700">view all</Link>
       </div>
-      <div className="flex justify-between gap-8 mt-5">
+      <div className="flex flex-wrap justify-center md:justify-between mt-5">
 
         {branddata && branddata.map(user => (
 
-          <Brandcard key={user.brand_id} className="p-4" brand_id={user.brand_id}
+          <Brandcard key={user.brand_id} className="" brand_id={user.brand_id}
           brand_name={user.brand_name}
           brand_slug={user.brand_slug}
           brand_img={user.brand_img}

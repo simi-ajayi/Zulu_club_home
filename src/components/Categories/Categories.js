@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { url } from "../api/Url";
 
-const Categories = () => {
+const Categories = ({data}) => {
   const [categoriesdata, setCategoriesdata] = useState([]);
 
   const getCat = async () => {
@@ -28,12 +28,12 @@ const Categories = () => {
   return (
     <div className="mt-10">
       <div className="flex justify-between items-center">
-        <h1 className="text-left font-bold text-2xl">Categories</h1>
+        <h1 className="text-left font-bold text-[22px]" style={{color:`${data?.component?.image_gallery?.color}`}}>{data?.component?.categorycard?.title}</h1>
         <Link to="" className="text-blue-700">
           view all
         </Link>
       </div>
-      <div className="flex justify-between gap-8 mt-5">
+      <div className="flex flex-wrap justify-center md:justify-between gap-8 mt-5">
         {categoriesdata.map((item,index) => (
           <Link to="/" key={index}>
             {/* <Link to={`/categories/${item.category_id}`} key={item.category_id}> */}

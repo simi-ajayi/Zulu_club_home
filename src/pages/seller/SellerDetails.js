@@ -1,6 +1,6 @@
 import React, { useContext, useEffect, useState } from "react";
 import axios from "axios";
-import { useParams } from "react-router-dom";
+import { json, useParams } from "react-router-dom";
 import Card2 from "../../components/cards/Card2";
 import Header from "../../components/header/Header";
 import Banner1 from "../../components/cards/Banner1";
@@ -22,7 +22,8 @@ import Footer from "../../components/footer/Footer";
 
 const SellerDetails = () => {
   const { id } = useParams();
-
+  const [data, setData] = useState([])
+  console.log("data",data)
   const {
     sellerListdata,
     setSellerListdata,
@@ -37,7 +38,16 @@ const SellerDetails = () => {
     try {
       let response = await axios.post(url + "/app/v1/api/seller_list?id=85");
       let res = await response.data;
+
+      // console.log(typeof(res[0]?.json_component)) // string convert object
+      const data = res[0]?.json_component
+      // console.log(typeof(data))
+      console.log(data)
+      const Jsonres = JSON.parse(data)
       setSellerListdata(res[0]);
+      // console.log(Jsonres.component)
+      setData(Jsonres)
+      // console.log(super_top_bar)
       setLoader(false);
       setError(false);
     } catch (error) {
@@ -92,19 +102,21 @@ const SellerDetails = () => {
 
   return (
     <>
-      <CategoriesMenu />
+    <h1 className="text-center h-[45px] relative top[0px] text-[16px] flex items-center justify-center" style={{fontStyle:`${data?.component?.super_top_bar?.website_style}`,color:`${data?.component?.super_top_bar?.color}`,backgroundColor:`${data?.component?.super_top_bar?.backgroundcolor}`}}>{data?.component?.super_top_bar?.text}</h1>
+    
+      <CategoriesMenu data ={data}/>
       <Banner1 images={sliderImages} />
-      <BrandsSection />
-      <Categories />
-      <Highlights />
-      <Features />
+      <BrandsSection data={data}/>
+      <Categories data={data}/>
+      <Highlights data={data}/>
+      <Features data={data}/>
       {/* <ProductGalleries /> */}
-      <Blogs />
-      <Testimonials />
-      <VideoSlider />
-      <Model3D />
-      <OutletBanner />
-      <AboutUs />
+      <Blogs data={data}/>
+      <Testimonials data={data}/>
+      <VideoSlider data={data}/>
+      <Model3D data={data}/>
+      <OutletBanner data={data}/>
+      <AboutUs data={data}/>
 
       {/* second api */}
 

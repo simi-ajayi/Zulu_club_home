@@ -7,7 +7,8 @@ export const Blogcard = ({name,width,height, title, id, Blogimage}) => {
      {
         Blogimage ?
           <>
-            <img src={`${url}/${Blogimage}`} alt="" className="size-[100px] bg-gray-200  rounded-lg" />
+            {/* <img src={`${url}/${Blogimage}`} alt="" className="size-[100px] bg-gray-200  rounded-lg" /> */}
+            <img src={`${url}/${Blogimage}`} alt="" className="w-[266px] h-[266px] object-cover  rounded-lg" />
           </>
           :
           <>

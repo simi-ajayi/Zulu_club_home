@@ -4,7 +4,7 @@ import "../../../pages/zulu_club/Home.css";
 import a1 from "../../../assets/images/image8.webp";
 const Cont7 = () => {
   return (
-    <div className="cont5 relative mt-20 mx-auto w-[750px]">
+    <div className="cont5 relative mt-20 mx-auto ">
       <img
         src={a1}
         alt="Description of the image"
