@@ -5,24 +5,6 @@ import { url } from "../api/Url";
 
 const Model3D = ({ data }) => {
 
-
-  // useEffect(() => {
-  //   const fetchvideo = async() =>{
-  //     try {
-  //      const res = await fetch('https://zulushop.in/get_video/85',{
-  //       method: 'POST',
-  //      })
-   
-  //      const result = await res.json();
-  //      console.log(result,"video")
-  //     } catch (error) {
-  //      console.log(error,"Failed to get video")
-  //     }
-  //  }
-  //  fetchvideo();
-  // }, [])
-
-
   const getCat = async () => {
     
     try {
@@ -49,6 +31,7 @@ const Model3D = ({ data }) => {
           view all
         </Link>
       </div>
+      
     </div>
   );
 };
