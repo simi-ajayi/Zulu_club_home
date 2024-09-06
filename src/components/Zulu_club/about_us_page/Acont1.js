@@ -5,6 +5,7 @@ import logo from "../../../assets/images/zulu-logo-2.png";
 const Acont1 = () => {
   return (
     <div>
+      {/* second section */}
       <div className="Acont1 container mb-5 bg-cover bg-center mt-20 rounded-[20px]">
         <div className="bg-[#1f0a1d7f] h-full pt-20">
           <h1 className="text-4xl font-bold pb-5">

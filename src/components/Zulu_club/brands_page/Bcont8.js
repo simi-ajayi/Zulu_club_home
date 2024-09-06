@@ -27,7 +27,7 @@ const Bcont8 = () => {
         </h1>
       </div>
       <div className="flex justify-evenly flex-wrap items-center mt-10">
-        <div className="w-[100%] h-[100%]">
+      {/*   <div className="w-[100%] h-[100%]">
           <Swiper
             navigation={true}
             modules={[Pagination, Navigation, Autoplay]}
@@ -61,9 +61,9 @@ const Bcont8 = () => {
               <img src={a5} alt="" className="rounded-[10px]" />
             </SwiperSlide>
           </Swiper>
-        </div>
+        </div> */}
         <div className="">
-          <ul className="ml-10 ">
+          <ul className="ml-10" style={{ textAlign: 'center' }}>
             <li>Create a differentiation</li>
             <li>Truly engage the consumer</li>
             <li>Cross-sell other products</li>

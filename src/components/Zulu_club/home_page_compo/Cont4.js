@@ -13,7 +13,7 @@ const Cont4 = ({ data }) => {
   console.log("cont4",data)
   return (
     <div class="mt-20 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
-      <h1 class="pb-12 text-4xl font-bold">{data.title}</h1>
+      <h1 class="pb-12 text-4xl font-bold">  {data.title}</h1>
       <div class="pt-3 mx-auto">
         <div class="new1 justify-center flex flex-wrap text-lg mx-auto">
           <div class="new-item1 flex flex-col flex-wrap items-center">

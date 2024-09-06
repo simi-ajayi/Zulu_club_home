@@ -3,9 +3,9 @@ import "../../../assets/style/brand_page.css";
 
 const Bcont7Card = ({ data, title, width1, width2, bgimg }) => {
   return (
-    <div className={`${bgimg} mt-5 bg-cover bg-center bg-no-repeat`}>
+    <div className={`${bgimg} mt-5 bg-cover bg-center bg-no-repeat`} style={{ marginTop: 90 }}>
       <div className="py-12 bg-[#1f0a1de1]">
-        <h1 className="mb-5 text-4xl pt-4 font-bold text-white">{title}</h1>
+        <h1 className="mb-5 text-4xl pt-4 font-bold text-white"> {title}</h1>
         <div className="text-contents text-start px-4 lg:px-0">
           {data.map((item, index) => {
             return (

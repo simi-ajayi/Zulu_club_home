@@ -5,7 +5,7 @@ import logo from "../../../assets/images/zulu-logo-2.png";
 const Ccont2 = () => {
   return (
     <div>
-    <div className="Acont1 container mb-5 bg-cover bg-center mt-20 rounded-[20px]">
+    <div className="Acont1 container mb-5 bg-cover bg-center rounded-[20px]">
       <div className="bg-[#1f0a1d7f] h-full pt-20">
         <h1 className="text-4xl font-bold pb-5">
           {/* Zulu is an <span className="highlight">exciting</span> tech

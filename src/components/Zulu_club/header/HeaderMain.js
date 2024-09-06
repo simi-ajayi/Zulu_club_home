@@ -75,14 +75,14 @@ const HeaderMain = () => {
             >
               Home
             </NavLink>
-            <NavLink
+       {/*      <NavLink
               to="/consumer"
               className={({ isActive }) =>
                 isActive ? "text-[#ffde59]" : "text-white"
               }
             >
               Consumers
-            </NavLink>
+            </NavLink> */}
             <NavLink
               to="/business"
               className={({ isActive }) =>

@@ -122,21 +122,21 @@ const BrandsPage = () => {
     <div className="brands">
       {/* <Cont1 data={cont1Data} /> */}
       <BrandFirstComp data={cont1Data}/>
-      <Bcont6 />
-      <Bcont7Card
+    {/*   <Bcont6 /> */}
+      <Bcont7Card 
         data={data1}
         title={"Is building an online fashion brand not as easy?"}
         width1="400px"
         width2="500px"
         bgimg={"bgimg1"}
       />
-      <Bcont8 />
+       <Bcont8 /> {/* Offering a new experience is the ONLY answer */}
       <Bcont7Card
         data={data2}
         title={"Thinking of a new concept is easy no rocket science here"}
         width1="400px"
         width2="578px"
-      />
+      /> {/* Is building an online fashion brand not as easy? */}
       <Bcont7Card2
         data={data3}
         title={

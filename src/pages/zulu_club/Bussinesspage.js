@@ -26,8 +26,9 @@ import a7 from "../../assets/images/img/17.png";
 import a8 from "../../assets/images/img/18.png";
 import a9 from "../../assets/images/img/19.png";
 import Business from "../../components/Zulu_club/home_page_compo/Business";
+import Businessui from "../../components/Zulu_club/home_page_compo/Businessui";
 
-const HomePage = () => {
+const Bussinesspage = () => {
   const cont1Data = [
     {
       imgbg: "Home_page_image",
@@ -57,10 +58,11 @@ const HomePage = () => {
 
   return (
     <>
-     {/*  <Cont1 data={cont1Data} /> */}  {/* first section */}
+      {/*  <Businessui data={cont1Data} /> my file */}
+      <Cont1 data={cont1Data} />  {/* first section */}
        <Business data={cont1Data} /> 
       <Cont15 />
-     {/*  <Cont2 /> */}
+      <Cont2 />
       <Cont3 /> {/* Zulu will win you over with excitement */}
       {/*  hidden carousal  */}
    
@@ -72,9 +74,9 @@ const HomePage = () => {
       <Cont8 />
       <Cont9 />
       <Pricecard />
-      {/* <FAQs /> */}
+
     </>
   );
 };
 
-export default HomePage;
+export default Bussinesspage;
