@@ -8,6 +8,7 @@ import Bcont12 from "../../components/Zulu_club/brands_page/Bcont12";
 import Cont5 from "../../components/Zulu_club/home_page_compo/Cont5";
 // import "./Home.css";
 import Bcont7Card2 from "../../components/Zulu_club/brands_page/Bcont7Card2";
+import BrandFirstComp from "./BrandFirstComp";
 
 const BrandsPage = () => {
   const cont1Data = [
@@ -119,7 +120,8 @@ const BrandsPage = () => {
   ];
   return (
     <div className="brands">
-      <Cont1 data={cont1Data} />
+      {/* <Cont1 data={cont1Data} /> */}
+      <BrandFirstComp data={cont1Data}/>
       <Bcont6 />
       <Bcont7Card
         data={data1}

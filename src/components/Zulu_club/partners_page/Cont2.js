@@ -82,10 +82,10 @@ const Cont2 = () => {
           </h1>
           <p className="text-[#eee]">Select the one that best describes you</p>
         </div>
-        <div className="mt-10 grid grid-cols-5 items-center justify-evenly">
+        <div className="mt-10 flex flex-wrap items-center justify-evenly">
           {data.map((item, index) => {
             return (
-              <div key={index} class="card-item mt-10 flex flex-col items-center justify-center ">
+              <div key={index} class="card-item mt-10 flex flex-wrap flex-col items-center justify-center ">
                 <div class="img-container">
                   <img src={item.img1} alt="Private Labels" class="image" />
                   <img

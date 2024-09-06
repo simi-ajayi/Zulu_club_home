@@ -34,12 +34,12 @@ const ConsumerPage = () => {
   };
   return (
     <>
-      <Ccont1 />
       <Ccont2 />
+      <Ccont1 />
       {/* <Acont1 /> */}
       <Cont4 data={cont4Data} />
       <div className="mt-16">
-        <button className="btn1 w-[250px] text-3xl">Waiting List</button>
+        <button className="btn1 w-[250px] text-3xl">Jion the Wait List</button>
       </div>
       <Cont5 />
     </>

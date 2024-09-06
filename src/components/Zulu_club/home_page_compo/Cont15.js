@@ -42,12 +42,12 @@ const Cont15 = () => {
             <strong className="font-bold"> best assortment.</strong>
           </p>
         </div>
-        <div className="py-5">
+        <div className="py-5 mt-3 flex items-center justify-center flex-wrap gap-3">
           <button className="btn1 w-52">Download App</button>
 
           {/* Popup */}
 
-          <button onClick={handleOpenPopup} className="btn1 w-52 ml-3">
+          <button onClick={handleOpenPopup} className="btn1 w-52">
             Waiting list
           </button>
 

@@ -10,7 +10,7 @@ const Acont1 = () => {
           <h1 className="text-4xl font-bold pb-5">
             {/* Zulu is an <span className="highlight">exciting</span> tech
             platform. */}
-            India’s most exciting Omni-channel Fashion marketplace
+            India’s most exciting <br /> Omni channel <span className="text-yellow-200">Fashion</span>  market place
           </h1>
 
           {/* <div className="flex justify-center ">
@@ -21,15 +21,9 @@ const Acont1 = () => {
               alt=""
             />
           </div> */}
-          <p className="text-xl mt-72 py-8 font-light px-2 leading-[50px] text-[#c9c3c9] bg-[#1f0a1dd7]">
-            Fashion is all about excitement.
-            <br />
-            Excitement comes from something new and better.
-            <br />
-            A lot of exciting things are happening, a lot more is possible.
-            <br />
-            Zulu was born to find & deliver that excitement to you - in person
-            & online.
+          <p className="text-xl mt-72 py-8 font-light px-2 leading-[30px] sm:leading-[50px] text-[#c9c3c9] bg-[#1f0a1dd7]">
+            Fashion is all about excitement. <br />Zulu was born to find & deliver that <span className="font-bold text-yellow-200">excitement</span> to you <span className="text-yellow-200 font-bold">in person</span>
+            &nbsp; & online.
           </p>
           <div className="h-[10] w-full"></div>
         </div>

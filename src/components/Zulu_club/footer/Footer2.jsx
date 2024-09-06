@@ -6,17 +6,17 @@ import { FaLinkedin } from "react-icons/fa";
 const Footer2 = () => {
   return (
     <footer id="foot" className="py-16 text-white">
-      <div className="container w-full mx-auto  text-left pt-5">
+      <div className="container w-full mx-auto text-left pt-5">
         <section>
-          <div className="flex flex-wrap text-left">
-            <div className="w-full md:w-[30%]  mt-3">
+          <div className="flex flex-wrap items-center text-left">
+            <div className="w-full md:w-[30%] flex flex-col items-center   mt-3">
               <h6 className="mb-4 font-bold text-lg">Company</h6>
               <p>About us</p>
-              <p>Contact us</p>
+              {/* <p>Contact us</p> */}
               <p>Business</p>
               <p>Channel Partners</p>
             </div>
-            <div className="w-full md:w-[30%]  mt-3">
+            {/* <div className="w-full md:w-[30%] flex flex-col items-center sm:block mt-3">
               <h6 className="mb-4 font-bold text-lg">Legal</h6>
               <p>
                 <a href="#">Privacy Policy</a>
@@ -27,8 +27,8 @@ const Footer2 = () => {
               <p>
                 <a href="#">Return Policy</a>
               </p>
-            </div>
-            <div className="w-full md:w-[30%]  mt-3">
+            </div> */}
+            <div className="w-full md:w-[30%] flex flex-col items-center sm:block mt-3">
               <h6 className="mb-4 font-bold text-lg text-left">Contact us</h6>
               <p>hi@zulu.club</p>
               <p> +91 85279 20080</p>
@@ -42,8 +42,8 @@ const Footer2 = () => {
         </section>
       </div>
       <hr className="border-none outline-none" />
-      <div className="container mx-auto  px-4 py-2 w-full">
-        <div className="flex mb-3 float-right">
+      <div className="container mx-auto  px-4 py-2 mt-3 w-full">
+        <div className="flex mb-3 items-center justify-center">
           <a href="#" className="px-2">
             <FaTwitter />
           </a>

@@ -1,13 +1,13 @@
 import React from "react";
 import "../../../pages/zulu_club/Home.css";
-import zululogo from '../../../assets/images/New_ImgesFor/1.png'
-const Cont1 = ({ data }) => {
+import zululogo from '../../../assets/images/New_ImgesFor/4.png'
+const Business = ({ data }) => {
   return (
     <div>
       <div className="text-content text-white">
         <h1 className="md:text-4xl absolute top-[18%] left-[10%] text-[40px] leading-[40px] font-bold" style={{textShadow:'2px 2px 2px black'}}>
-        The premium <br />
-<span className="text-yellow-200">fashion</span> Club.
+        Celebrate Your <br />
+<span className="text-yellow-200">Uniqueness</span>.
 {/* Celebrate Your Uniqueness */}
 
         </h1>
@@ -19,15 +19,19 @@ const Cont1 = ({ data }) => {
       {/* <div className={`${data[0].imgbg} cont1 h-screen container mx-auto mt-0 bg-cover bg-center rounded-[20px]`}></div>
       <img src={zululogo} className="rounded-[35px] " alt="" /> */}
 
-      <div className="hidden sm:block">
+      {/* <div className="hidden sm:block">
         <div className={`${data[0].imgbg} cont1 sm:h-[50vh] md:h-[71vh] lg:h-screen w-full container mx-auto mt-0 bg-contain bg-center rounded-[20px]`}></div>
-      </div>
+      </div> */}
 
-      <div className="flex justify-center mt-5 sm:hidden">
+      <div className="flex justify-center mt-5">
         <img src={zululogo} className="" alt="Zulu Logo" />
       </div>
     </div>
   );
 };
 
-export default Cont1;
+export default Business;
+
+
+
+// Business

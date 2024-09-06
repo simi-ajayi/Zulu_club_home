@@ -63,11 +63,11 @@ const Cont4 = ({ data }) => {
         </div>
 
         {/* <!-- Mobile Carousel --> */}
-        <div class="lg:hidden">
+        {/* <div class="lg:hidden">
           <div id="carouselExampleAutoplaying" class="relative">
             <div class="relative overflow-hidden">
               <div class="carousel-inner">
-                {/* <!-- Carousel Item 1 --> */}
+                
                 <div class="carousel-item active">
                   <div class="flex flex-col items-center">
                     <div class="relative">
@@ -87,7 +87,7 @@ const Cont4 = ({ data }) => {
                     </h2>
                   </div>
                 </div>
-                {/* <!-- Add other carousel items similarly --> */}
+               
               </div>
               <button
                 class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-gray-800 text-white p-2"
@@ -107,7 +107,7 @@ const Cont4 = ({ data }) => {
               </button>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );

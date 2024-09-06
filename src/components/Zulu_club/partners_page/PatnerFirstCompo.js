@@ -1,7 +1,7 @@
 import React from "react";
 import "../../../pages/zulu_club/Home.css";
-import zululogo from '../../../assets/images/New_ImgesFor/1.png'
-const Cont1 = ({ data }) => {
+import zululogo from '../../../assets/images/New_ImgesFor/4.png'
+const PatnerFirstCompo = ({ data }) => {
   return (
     <div>
       <div className="text-content text-white">
@@ -30,4 +30,7 @@ const Cont1 = ({ data }) => {
   );
 };
 
-export default Cont1;
+export default PatnerFirstCompo;
+
+
+// PatnerFirstCompo

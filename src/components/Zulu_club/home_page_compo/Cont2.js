@@ -8,6 +8,12 @@ import a12 from "../../../assets/images/rising-brands.webp";
 import a13 from "../../../assets/images/d2c-boutiques.webp";
 import a14 from "../../../assets/images/private-labels.png.webp";
 import "../../../pages/zulu_club/Home.css";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 const Cont2 = () => {
   return (
     <div className="container mx-auto text-center mt-20 font-bold text-4xl text-white">
@@ -15,7 +21,8 @@ const Cont2 = () => {
         World-class offering
         <span className="highlight"> tailor-made</span> for Indian businesses
       </h1>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
+
+      {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-10">
         <div className="flex justify-center items-center flex-col card-item">
           <div className="img-container rounded-sm">
             <img
@@ -88,7 +95,54 @@ const Cont2 = () => {
             Labels
           </p>
         </div>
-      </div>
+      </div> */}
+
+      <Swiper
+        navigation={true}
+        modules={[Pagination, Navigation, Autoplay]}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        loop={true}
+        pagination={{
+          clickable: true,
+          el: ".swiper-pagination",
+          bulletClass: "swiper-pagination-bullet",
+          bulletActiveClass: "swiper-pagination-bullet-active",
+          modifierClass: "swiper-pagination-",
+        }}
+        className="mySwiper"
+      >
+        <SwiperSlide className="w-fit h-fit">
+        <img
+              src={a2}
+              alt="D2C & Boutiques"
+              className="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-105"
+            />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img
+              src={a2}
+              alt="D2C & Boutiques"
+              className="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-105"
+            />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img
+              src={a2}
+              alt="D2C & Boutiques"
+              className="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-105"
+            />
+        </SwiperSlide>
+        <SwiperSlide>
+        <img
+              src={a2}
+              alt="D2C & Boutiques"
+              className="w-full h-auto transition-transform duration-300 ease-in-out hover:scale-105"
+            />
+        </SwiperSlide>
+      </Swiper>
     </div>
   );
 };

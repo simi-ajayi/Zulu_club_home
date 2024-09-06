@@ -7,7 +7,7 @@ import "./pages/zulu_club/Home.css";
 const Layout = () => {
   return (
     <div className="bg-[#1f0a1d]">
-      <div className="w-4/5 pt-[80px] container mx-auto text-center text-white">
+      <div className="w-full pt-[80px] container mx-auto text-center text-white">
         <HeaderMain />
         <Outlet />
         <Footer2 />

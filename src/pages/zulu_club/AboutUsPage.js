@@ -52,8 +52,8 @@ const AboutUsPage = () => {
     <div className="aboutus">
       <Cont1 data={cont1Data} />
       <Acont1 />
-      <Acont6 />
       <Cont4 data={cont4Data} />
+      <Acont6 />
       <Acont5 />
       {/* <Acont2 /> */}
       <Acont3 />

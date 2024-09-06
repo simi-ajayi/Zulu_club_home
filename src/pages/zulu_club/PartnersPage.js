@@ -4,6 +4,7 @@ import Cont5 from "../../components/Zulu_club/home_page_compo/Cont5";
 import Cont2 from "../../components/Zulu_club/partners_page/Cont2";
 import "../../assets/style/partner_page.css";
 import "./Home.css";
+import PatnerFirstCompo from "../../components/Zulu_club/partners_page/PatnerFirstCompo";
 const PartnersPage = () => {
   const cont1Data = [
     {
@@ -18,7 +19,8 @@ const PartnersPage = () => {
   ];
   return (
     <div className="partner">
-      <Cont1 data={cont1Data} />
+      {/* <Cont1 /> */}
+      <PatnerFirstCompo data={cont1Data}/>
       <Cont2 />
       <div class="mt-20 mb-5">
         <button class="btn1 w-[250px] text-[1.75rem]">Download App</button>

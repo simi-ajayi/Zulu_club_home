@@ -25,6 +25,7 @@ import a6 from "../../assets/images/img/16.png";
 import a7 from "../../assets/images/img/17.png";
 import a8 from "../../assets/images/img/18.png";
 import a9 from "../../assets/images/img/19.png";
+import Business from "../../components/Zulu_club/home_page_compo/Business";
 
 const HomePage = () => {
   const cont1Data = [
@@ -56,7 +57,8 @@ const HomePage = () => {
 
   return (
     <>
-      <Cont1 data={cont1Data} />
+      {/* <Cont1 data={cont1Data} /> */}
+      <Business data={cont1Data}/>
       <Cont15 />
       <Cont2 />
       <Cont3 />
