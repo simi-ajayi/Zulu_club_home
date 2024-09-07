@@ -91,6 +91,8 @@ const SellerDetails = () => {
 
   return (
     <>
+    
+    
     <h1 className="text-center h-[45px] relative top[0px] text-[16px] flex items-center justify-center" style={{fontStyle:`${data?.component?.super_top_bar?.website_style}`,color:`${data?.component?.super_top_bar?.color}`,backgroundColor:`${data?.component?.super_top_bar?.backgroundcolor}`}}>{data?.component?.super_top_bar?.text}</h1>
     
       <CategoriesMenu data ={data}/>
