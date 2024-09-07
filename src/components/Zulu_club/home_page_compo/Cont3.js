@@ -37,15 +37,15 @@ const Cont3 = () => {
   //   }, 150);
   // }
   return (
-    <div className="cont3 py-5 mt-20 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
+    <div className="cont3 py-5 mt-10 container text-center mx-auto text-white font-raleway font-semibold text-5xl">
       {/* // <div className="cont3  mx-auto text-center bg-cover bg-center py-10 text-white rounded-[20px]"> */}
       <div className="bg-color bg-transparent px-3">
-        <h1 className="py-8 font-bold text-4xl">
-          Zulu gives you everything you need to grow
+        <h1 className="py-5 font-bold text-3xl sm:text-4xl">
+          Zulu gives you <span className="text-yellow-200">everything</span> you need to grow
         </h1>
         <div className="main-content pb-3 flex flex-wrap justify-evenly mt-10">
           <div className="main-cont-L w-full lg:w-[40%] mt-4 lg:mt-0 order-1 lg:order-none">
-            <div className="new-item">
+            <div className="new-item"> 
               <img src={im1} alt="Image 1" />
             </div>
             <div className="new-item" onclick="scaleDiv(this)">
@@ -74,7 +74,7 @@ const Cont3 = () => {
             </div>
           </div>
           <div className="main-cont-R w-full xl:w-5/12 pt-0 lg:pt-4 order-0 lg:order-1">
-            <div className="h-[70%]">
+            <div className="h-full">
               <Swiper
                 navigation={true}
                 modules={[Pagination, Navigation, Autoplay]}
@@ -93,35 +93,35 @@ const Cont3 = () => {
                 className="mySwiper"
               >
                 <SwiperSlide>
-                  <img src={a1} alt="" className="rounded-[10px]" />
+                  <img src={a1} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={a2} alt="" className="rounded-[10px]" />
+                  <img src={a2} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={a3} alt="" className="rounded-[10px]" />
+                  <img src={a3} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={a4} alt="" className="rounded-[10px]" />
+                  <img src={a4} alt="" />
                 </SwiperSlide>
                 <SwiperSlide>
-                  <img src={a5} alt="" className="rounded-[10px]" />
+                  <img src={a5} alt="" />
                 </SwiperSlide>
               </Swiper>
             </div>
-            <p className="leading-snug mt-7 text-[1.2rem] text-center hidden lg:block">
+            <p className="leading-snug mt-7 text-2xl text-center hidden lg:block">
               Zulu is the only technology solution you will ever need. 
             </p>
             <div className="img hidden">
               <img className="banner1" src="./images/qw.webp" alt="Banner 1" />
-              <h2 className="text-lg mx-[7%]">
+              <h2 className=" sm:text-lg mx-[7%]">
                 Zulu is the only technology solution you will ever need. All the
                 tools that you already use & many more that you never dreamt of.
               </h2>
             </div>
           </div>
         </div>
-        <p className="leading-snug block lg:hidden">
+        <p className="w-full text-lg block lg:hidden">
           Zulu is the only technology solution you will ever need. All the tools
           that you already use & many more that you never dreamt of.
         </p>

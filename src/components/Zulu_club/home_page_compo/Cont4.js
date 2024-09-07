@@ -16,6 +16,7 @@ const Cont4 = ({ data }) => {
       <h1 class="pb-12 text-4xl font-bold">  {data.title}</h1>
       <div class="pt-3 mx-auto">
         <div class="new1 justify-center flex flex-wrap text-lg mx-auto">
+          
           <div class="new-item1 flex flex-col flex-wrap items-center">
             <div class="img-container">
               <img src={data.a2} alt="Image 4" class="w-full h-auto" />

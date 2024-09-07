@@ -26,7 +26,7 @@ const Bcont8 = () => {
           answer
         </h1>
       </div>
-      <div className="flex justify-evenly flex-wrap items-center mt-10">
+      <div className="flex justify-evenly flex-wrap items-center sm:mt-10">
       {/*   <div className="w-[100%] h-[100%]">
           <Swiper
             navigation={true}
@@ -63,7 +63,7 @@ const Bcont8 = () => {
           </Swiper>
         </div> */}
         <div className="">
-          <ul className="ml-10" style={{ textAlign: 'center' }}>
+          <ul className="sm:ml-10 text-center" style={{ textAlign: 'center' }}>
             <li>Create a differentiation</li>
             <li>Truly engage the consumer</li>
             <li>Cross-sell other products</li>

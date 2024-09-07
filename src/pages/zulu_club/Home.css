@@ -442,7 +442,7 @@ input:checked + label .description5 {
 .a1card h4 {
   font-size: 34px;
   text-align: center;
-  line-height: 100px;
+  /* line-height: 100px; */
   color: #ffde59;
 }
 /* .a1card button {
@@ -456,7 +456,7 @@ input:checked + label .description5 {
   background-color: #ffde59;
 } */
 .a1card p {
-  line-height: 50px;
+  /* line-height: 50px; */
   min-height: 320px;
   font-size: 22px;
 }
@@ -970,7 +970,7 @@ input:checked + label .description5 {
   }
   .a1card p {
     color: white;
-    line-height: 40px;
+    /* line-height: 40px; */
     min-height: 170px;
     font-size: 18px;
   }

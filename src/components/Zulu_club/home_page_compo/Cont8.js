@@ -6,7 +6,7 @@ const Cont8 = () => {
   return (
     <div class="cont11 mx-auto container bg-image bg-no-repeat bg-cover text-white">
       <div class="bg-color inside flex flex-wrap justify-center items-center">
-        <div class="inside-Left w-full lg:w-5/12 order-1 lg:order-none text-left pl-4 lg:pl-0">
+        <div class="inside-Left w-full lg:w-5/12 order-1 lg:order-none flex flex-col items-center sm:text-left pl-4 lg:pl-0">
           <h1 class="highlight text-4xl lg:text-5xl">
             Zulu offers the <span class="highlight2">best</span> in <br />
             fashion ahead of time

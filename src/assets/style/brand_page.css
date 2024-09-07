@@ -23,6 +23,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   /* margin-left: 80px; */
   margin-top: 40px;
   flex-wrap: wrap;
@@ -53,7 +54,7 @@
 .brands .thought .tSpan2 {
   font-size: 1.1rem;
   /* font-size: clamp(0.8rem,2.5vw, 1.4rem); */
-  padding-left: 20px;
+  /* padding-left: 20px; */
   color: #ffde59;
 }
 .brands .cont8 ul {
@@ -107,16 +108,16 @@
     margin-top: 20px;
   }
   .brands .thought .tSpan1 {
-    font-size: 0.6rem;
+    font-size: 17px;
     padding-left: 15px;
     font-weight: 600;
   }
   .brands .thought .tSpan2 {
-    font-size: 0.62rem;
-    padding-left: 25px;
+    font-size: 13px;
+    /* padding-left: 25px; */
   }
   .brands .cont8 ul {
-    line-height: 50px;
+    line-height: 39px;
     font-size: 1rem;
     padding-top: 20px;
     text-align: center;

@@ -3,6 +3,16 @@ import "../../../pages/zulu_club/Home.css";
 import a1 from "../../../assets/images/image6-1.webp";
 import a2 from "../../../assets/images/image6-2.webp";
 import a3 from "../../../assets/images/ZULU AI ART.png";
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+import "../../cards/styles.css";
+
+// import required modules
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 
 const Cont9 = () => {
   return (
@@ -34,7 +44,7 @@ const Cont9 = () => {
           </div>
           <div class="step">
             <div class="relative">
-              <img 
+              <img
                 src={a2}
                 alt="Step 2 Image"
                 class="absolute"
@@ -54,7 +64,7 @@ const Cont9 = () => {
           </div>
           <div class="step">
             <div class="relative">
-              <img 
+              <img
                 src={a3}
                 alt="Step 3 Image"
                 class="absolute"
@@ -73,7 +83,8 @@ const Cont9 = () => {
             </p>
           </div>
         </div>
-        <div class="steps px-4 block md:hidden">
+
+        {/* <div class="steps px-4 block md:hidden">
           <div
             id="carouselExampleAutoplaying"
             class="carousel slide w-full"
@@ -168,6 +179,100 @@ const Cont9 = () => {
               ></span>
               <span class="sr-only">Next</span>
             </button>
+          </div>
+        </div> */}
+
+
+        <div className="block md:hidden main-cont-R w-full pt-0 lg:pt-4 order-0 lg:order-1">
+          <div className="object-cover">
+            <Swiper
+              navigation={true}
+              modules={[Pagination, Navigation, Autoplay]}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                clickable: true,
+                el: ".swiper-pagination",
+                bulletClass: "swiper-pagination-bullet",
+                bulletActiveClass: "swiper-pagination-bullet-active",
+                modifierClass: "swiper-pagination-",
+              }}
+              className="mySwiper"
+            >
+              <SwiperSlide className="h-full">
+                <div class="carousel-item active">
+                  <div class="step">
+                    <div class="relative">
+                      <img
+                        src="./images/image6-1.webp"
+                        alt="Step 1 Image"
+                        class="absolute"
+                      />
+                      <div class="h42 flex justify-center items-center">
+                        <p class="text-red-700">
+                          Create your <br />
+                          Digital Avatar
+                        </p>
+                      </div>
+                    </div>
+                    <p>
+                      Step 1: <br />
+                      Create your Digital Avatar
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="carousel-item">
+                  <div class="step">
+                    <div class="relative">
+                      <img
+                        src="./images/image6-2.webp"
+                        alt="Step 2 Image"
+                        class="absolute"
+                      />
+                      <div class="h42 flex justify-center items-center">
+                        <p class="text-red-700">
+                          Create your <br />
+                          Digital Avatar
+                        </p>
+                      </div>
+                    </div>
+                    <p>
+                      Step 2: <br />
+                      Build your Catalog Content
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div class="carousel-item">
+                  <div class="step">
+                    <div class="relative">
+                      <img
+                        src="./images/ZULU AI ART.png"
+                        alt="Step 3 Image"
+                        class="absolute"
+                      />
+                      <div class="h42 flex justify-center items-center">
+                        <p class="text-red-700">
+                          Create your <br />
+                          Digital Avatar
+                        </p>
+                      </div>
+                    </div>
+                    <p>
+                      Step 3: <br />
+                      Go Live, Start Winning
+                    </p>
+                  </div>
+                </div>
+              </SwiperSlide>
+
+            </Swiper>
           </div>
         </div>
       </div>

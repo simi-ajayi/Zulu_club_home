@@ -1,10 +1,19 @@
 import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/navigation";
+
+import "../../cards/styles.css";
+
+// import required modules
+import { Autoplay, Navigation, Pagination } from "swiper/modules";
 const Cont10 = () => {
   return (
     <div class="cont10 container w-full mx-auto mt-20 py-10 bg-cover bg-center rounded-[20px]">
       <div class="bg-color bg-transparent">
-        <div class="a1Cards hidden md:flex flex-wrap justify-around py-5 px-3 items-center">
+        <div class="a1Cards hidden md:flex md:leading-3 flex-wrap justify-around px-3 items-center">
           <div class="a1card w-full md:w-[29%]">
             <h4 class="font-bold">10x Better</h4>
             <p>
@@ -38,14 +47,27 @@ const Cont10 = () => {
         </div>
 
         {/* mobile view */}
-        <div class="a1Cards block md:hidden">
-          <div
-            id="carouselExampleAutoplaying"
-            class="carousel slide"
-            data-bs-ride="carousel"
-          >
-            <div class="carousel-inner rounded-lg">
-              <div class="carousel-item active">
+
+        <div className="block md:hidden main-cont-R w-full pt-0 lg:pt-4 order-0 lg:order-1">
+          <div className="object-cover">
+            <Swiper
+              navigation={true}
+              modules={[Pagination, Navigation, Autoplay]}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              loop={true}
+              pagination={{
+                clickable: true,
+                el: ".swiper-pagination",
+                bulletClass: "swiper-pagination-bullet",
+                bulletActiveClass: "swiper-pagination-bullet-active",
+                modifierClass: "swiper-pagination-",
+              }}
+              className="mySwiper"
+            >
+              <SwiperSlide className="h-full">
                 <div class="a1card w-full">
                   <h4 class="font-bold">10x Better</h4>
                   <p>
@@ -56,8 +78,8 @@ const Cont10 = () => {
                     <button class="btn1">Explore</button>
                   </a>
                 </div>
-              </div>
-              <div class="carousel-item">
+              </SwiperSlide>
+              <SwiperSlide>
                 <div class="a1card w-full">
                   <h4 class="font-bold">Fashion Focus</h4>
                   <p>
@@ -68,8 +90,8 @@ const Cont10 = () => {
                     <button class="btn1">Explore</button>
                   </a>
                 </div>
-              </div>
-              <div class="carousel-item">
+              </SwiperSlide>
+              <SwiperSlide>
                 <div class="a1card w-full">
                   <h4 class="font-bold">80% Cheaper</h4>
                   <p>
@@ -81,32 +103,9 @@ const Cont10 = () => {
                     <button class="btn1">Explore</button>
                   </a>
                 </div>
-              </div>
-            </div>
-            <button
-              class="carousel-control-prev"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="prev"
-            >
-              <span
-                class="carousel-control-prev-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Previous</span>
-            </button>
-            <button
-              class="carousel-control-next"
-              type="button"
-              data-bs-target="#carouselExampleAutoplaying"
-              data-bs-slide="next"
-            >
-              <span
-                class="carousel-control-next-icon"
-                aria-hidden="true"
-              ></span>
-              <span class="sr-only">Next</span>
-            </button>
+              </SwiperSlide>
+
+            </Swiper>
           </div>
         </div>
       </div>
