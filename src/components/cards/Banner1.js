@@ -78,7 +78,7 @@ const Banner1 = ({ images }) => {
         {images.map((item, index) => (
           <SwiperSlide key={index}>
             <img
-              src={`https://zulushop.in/uploads/seller/${item.file_name}`}
+              src={`${item.file_name}`}
               alt=""
             />
           </SwiperSlide>

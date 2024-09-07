@@ -1,5 +1,6 @@
 import React, { useEffect, useState, useContext } from "react";
 import axios from "axios";
+import { url } from "../../components/api/Url";
 import Card1 from "../../components/cards/Card1";
 import Banner1 from "../../components/cards/Banner1";
 import UserContext from "../../context/UserContext";
@@ -15,18 +16,17 @@ import Highlights from "../../components/highlights/Highlights";
 import Model3D from "../../components/model3D/Model3D";
 
 const SellerHome = () => {
-  const [data, setData] = useState([]);
+  const [data, setData] = useState([]); // Ensure data is an array
   const [categories, setCategories] = useState([]);
-  const [sliderImages, setSliderImages] = useState([]);
-  const { setError, setLoader } = useContext(UserContext);
+  const { setError, setLoader, sellerListdata, setSellerListdata, loader, error } = useContext(UserContext);
   const sellersUrl = "https://zulushop.in/app/v1/api/get_sellers";
   const categoriesUrl = "https://zulushop.in/zulu_category_list";
-  const sliderUrl = "https://zulushop.in/zulu_slider_list"; 
+  const sliderUrl = "https://zulushop.in/zulu_slider_list";
 
   async function fetchData() {
     try {
       const response = await axios.post(sellersUrl);
-      setData(response.data.data);
+      setData(response.data.data || []); // Ensure the data is an array
     } catch (error) {
       console.error("Error fetching sellers:", error);
       setError(true);
@@ -37,8 +37,7 @@ const SellerHome = () => {
     try {
       const response = await axios.post(categoriesUrl);
       let res = response.data;
-      const baseUrl = "/uploads/category/";
-  
+
       if (typeof res === 'string') {
         try {
           res = JSON.parse(res);
@@ -48,17 +47,13 @@ const SellerHome = () => {
           return;
         }
       }
-  
-      if (Array.isArray(res.data)) {
-        const categoryImages = res.data.map((item) => {
 
-          const imageUrl = item.image.includes('zulushop.in') ? item.image : `${baseUrl}${item.image}`;
-          return {
-            image: imageUrl,
-            name: item.name 
-          };
-        }).slice(0, 4);
-  
+      if (Array.isArray(res.data)) {
+        const categoryImages = res.data.map((item) => ({
+          image: item.image,
+          name: item.name,
+        })).slice(0, 4);
+
         setCategories(categoryImages);
       } else {
         console.warn("Unexpected data structure:", res);
@@ -71,53 +66,57 @@ const SellerHome = () => {
       setLoader(false);
     }
   }
-  
-  async function fetchSliderData() {
+
+  async function sellerList() {
     try {
-      const response = await axios.post(sliderUrl);
-      let res = response.data;
-      const baseUrl = "https://zulushop.in/uploads/slider/";
-
-      if (typeof res === 'string') {
-        try {
-          res = JSON.parse(res);
-        } catch (parseError) {
-          console.error("Error parsing JSON:", parseError);
-          setSliderImages([]);
-          return;
-        }
-      }
-
-      if (Array.isArray(res.data)) {
-        const bannerImages = res.data.map((item) => {
-          const imageUrl = item.image.startsWith('http') ? item.image : `${baseUrl}${item.image}`;
-          return imageUrl;
-        }).filter(url => url !== null);
-
-        setSliderImages(bannerImages);
+      const response = await axios.post(url + "/app/v1/api/seller_list?id=85");
+      const res = await response.data;
+      const data = res[0]?.json_component || '{}';
+      const Jsonres = JSON.parse(data);
+      if (Array.isArray(Jsonres)) {
+        setSellerListdata(res[0]);
+        setData(Jsonres);
       } else {
-        console.warn("Unexpected data structure:", res);
-        setSliderImages([]);
+        console.warn("Invalid data structure for seller list.");
+        setData([]);
       }
+      setLoader(false);
+      setError(false);
     } catch (error) {
       setError(true);
-      console.error("Error fetching slider images:", error);
-    } finally {
-      setLoader(false);
+      console.log("ERROR MESSAGE :: ", error.message);
     }
   }
 
   useEffect(() => {
-    fetchData();
-    fetchCategories();
-    fetchSliderData();
+    const fetchAllData = async () => {
+      setLoader(true);
+      await Promise.all([fetchData(), fetchCategories(), sellerList()]);
+      setLoader(false);
+    };
+    fetchAllData();
   }, []);
+
+  let sliderImages = sellerListdata?.slider_images || [];
+  try {
+    sliderImages = JSON.parse(sliderImages);
+  } catch (error) {
+    console.error("Error parsing JSON:", error);
+    sliderImages = [];
+  }
 
   return (
     <>
-      <Banner1 images={sliderImages} />
-      {sliderImages.length === 0 && <p>No images to display</p>}
+      {sliderImages.length > 0 ? (
+        <Banner1 images={sliderImages} />
+      ) : (
+        <p>No images to display</p>
+      )}
       <h1 className="font-bold text-4xl mt-32 my-5">Zulu B2B section</h1>
+      
+      {error && <p className="text-red-500">An error occurred. Please try again later.</p>}
+      {loader && <p>Loading...</p>}
+
       <div className="flex flex-wrap justify-between">
         {data.map((value) => (
           <Card1 data={value} key={value.seller_id} />

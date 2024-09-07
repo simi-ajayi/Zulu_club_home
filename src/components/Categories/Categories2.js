@@ -1,5 +1,5 @@
 import React from "react";
-import Card3 from "../cards/Card3";
+import Card4 from "../cards/Card4";
 import { Link } from "react-router-dom";
 
 const Categories2 = ({ data }) => {
@@ -15,10 +15,10 @@ const Categories2 = ({ data }) => {
       </div>
       <div className="flex flex-wrap justify-center md:justify-between gap-8 mt-5">
         {data.map((item, index) => {
-          const imageUrl = "item.image";
+          const imageUrl = item.image;
           return (
             <Link to="/" key={index}>
-              <Card3 image={imageUrl} title={item.name} />
+              <Card4 image={imageUrl} title={item.name} />
             </Link>
           );
         })}
