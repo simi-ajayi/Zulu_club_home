@@ -39,10 +39,10 @@ const Highlights = ({data}) => {
       <div className="mt-5">
         <div className="flex justify-between">
           <div>
-            <h1 className="text-left font-bold text-[22px]" style={{color:`${data?.component?.image_gallery?.color}`}}>{data?.component?.features_section?.title}</h1>
+            <h1 className="text-left font-bold text-[22px]" style={{color:`${data?.component?.image_gallery?.color}`}}>Curated Collections</h1>
             {/* <p>{item.short_description}</p> */}
           </div>
-          <Link to="" className="text-blue-700">
+          <Link to="/AllHighlights" className="text-blue-700">
             view all
           </Link>
         </div>

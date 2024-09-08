@@ -19,6 +19,16 @@ import ConsumerPage from "./pages/zulu_club/ConsumerPage";
 
 import Bussinesspage from "./pages/zulu_club/Bussinesspage";
 import Business from "./components/Zulu_club/home_page_compo/Business";
+import AllModel3D from "./components/model3D/AllModel3D";
+import Video from "./components/model3D/Video";
+import ViewAllCategories from "./components/categaries_menu/ViewAllCategories";
+import ViewAllOutlets from "./components/cards/ViewAllOutlets";
+import AllBrands from "./components/brands/AllBrands";
+import AllHighlights from "./components/highlights/AllHighlights";
+import AllFeatures from "./components/features/AllFeatures";
+import AllBlogs from "./components/blogs/AllBlogs";
+import AllTestimonials from "./components/testimonials/AllTestimonials";
+import AllVideo from "./components/model3D/AllVideo";
 /* <Bussinesspage /> */
 const router = createBrowserRouter([
   {
@@ -78,6 +88,42 @@ const router = createBrowserRouter([
       {
         path: "test2",
         element: <Test2 />,
+      },
+      {
+        path: "All3DModels",
+        element: <AllModel3D />,
+      },
+      {
+        path: "AllVideos",
+        element: <AllVideo />,
+      },
+      {
+        path: "AllCategories",
+        element: <ViewAllCategories />,
+      },
+      {
+        path: "AllOutlets",
+        element: <ViewAllOutlets />,
+      },
+      {
+        path: "AllBrands",
+        element: <AllBrands />,
+      },
+      {
+        path: "AllHighlights",
+        element: <AllHighlights />,
+      },
+      {
+        path: "AllFeatures",
+        element: <AllFeatures />,
+      },
+      {
+        path: "AllBlogs",
+        element: <AllBlogs />,
+      },
+      {
+        path: "AllTestimonials",
+        element: <AllTestimonials />,
       },
     ],
   },

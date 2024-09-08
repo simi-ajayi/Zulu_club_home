@@ -9,7 +9,7 @@ const Categories2 = ({ data }) => {
         <h1 className="text-left font-bold text-[22px]" style={{ color: `${data?.component?.image_gallery?.color}` }}>
           {data?.component?.categorycard?.title || "Categories"}
         </h1>
-        <Link to="" className="text-blue-700">
+        <Link to="/AllCategories" className="text-blue-700">
           view all
         </Link>
       </div>

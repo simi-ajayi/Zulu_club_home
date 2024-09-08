@@ -45,7 +45,7 @@ const Features = ({data}) => {
                   <h1 className="text-left font-bold text-[22px]" style={{color:`${data?.component?.image_gallery?.color}`}}>{item.title}</h1>
                   <p className="text-left">{item.short_description}</p>
                 </div>
-                <Link to="" className="text-blue-700">
+                <Link to="/AllFeatures" className="text-blue-700">
                   view all
                 </Link>
               </div>

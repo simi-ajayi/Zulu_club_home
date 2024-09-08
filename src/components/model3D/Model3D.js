@@ -27,7 +27,7 @@ const Model3D = ({ data }) => {
     <div className="mt-10">
       <div className="flex justify-between items-center">
         <h1 className="text-left font-bold text-[22px]" style={{ color: `${data?.component?.image_gallery?.color}` }}>3D Models</h1>
-        <Link to="" className="text-blue-700">
+        <Link to="/" className="text-blue-700">
           view all
         </Link>
       </div>
