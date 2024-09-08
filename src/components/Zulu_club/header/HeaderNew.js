@@ -5,7 +5,8 @@ import { Link, NavLink } from "react-router-dom";
 import { IoMdMenu } from "react-icons/io";
 import { IoMdClose } from "react-icons/io";
 import Popup from "../Popup";
-const HeaderMain = () => {
+
+const HeaderNew = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(window.pageYOffset);
   const [visible, setVisible] = useState(true);
   const [isMenuOpen, setIsMenuOpen] = useState(true);
@@ -178,4 +179,4 @@ const HeaderMain = () => {
   );
 };
 
-export default HeaderMain;
+export default HeaderNew;

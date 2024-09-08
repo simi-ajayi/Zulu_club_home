@@ -26,10 +26,7 @@ const Header = () => {
     try {
       let response = await axios.post(url + "/app/v1/api/seller_list?id=85");
       let res = await response.data;
-
-
       const data = res[0]?.json_component
-
       const Jsonres = JSON.parse(data)
       setSellerListdata(res[0]);
       setData(Jsonres)
